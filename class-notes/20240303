@@ -1,0 +1,80 @@
+
+	Programming	-	Speaking
+	
+	Problem Solving
+	
+	Adding two integers
+	
+	Assist in rocket launching
+	
+	#include <stdio.h>		//Preprocessor directive (File Inclusion)
+	int main()
+	{
+		int a, b, c;				//Variable declaration
+		scanf("%d%d", &a, &b);
+		c = a + b;
+		printf("%d",c);
+	}
+	
+	
+	
+	Input
+	
+	2 x 1 = 2
+	2 x 2 = 4
+	
+	Two one za Two?
+	
+	Two ones are two!
+	
+	HC Verma
+	
+	Who should ask questions?
+	a) Teachers
+	b) Paper setters
+	c) Book authors
+	d) Students
+	
+	Students
+	
+	ANSI C
+	Let Us C
+	
+	C - The complete reference - Herbert Schildt
+	
+	LLL - Lifelong Learning
+	
+	Simplicity vs Simplism
+	
+	1. Type and save it a file. (Text Editor)
+	2. Compile (Compiler)
+	3. Execute (OS)	-	Test
+	
+	Characteristics of a good program:
+	1. Accurate
+	2. Efficient
+	3. Robust
+	4. Maintainable
+	5. Readable
+	6. User Friendly
+	
+	1972	-	C
+	
+	1985	-	Windows
+	
+	
+	GUI	-	Graphical User Interface
+	CUI - 	Character/Command-line User Interface
+	
+	IDE	-	Integrated Development Enviroment
+	
+	int main(void)
+	{
+	
+	}
+	
+	DRY	=	Don't Repeat Yourself
+	KISS	=	Keep It Simple Studpid
+	YAGNI	=	You Aren't Gonna Need It
+	
+	
