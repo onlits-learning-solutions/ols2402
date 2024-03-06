@@ -1,0 +1,66 @@
+
+	type-definition (typedef)
+	
+	datatypes (int, char, ...)
+		- primitive/fundamental/built-in (int, char, float, double)
+		- derived (array, function, pointer)
+		- user-defined (structure, union, enumeration)
+		
+	32 keywords
+	
+	
+	8789995051	-	string of 10 characters
+	
+	45	-	int
+	
+	
+	WAP to accept marks scored by a student in any 5 subjects and
+	find his total marks obtained.
+	
+	int main(void)
+	{
+		typedef int marks;
+		marks e, m, h, sc, ssc, tm;
+	
+	}
+	
+	datatype	-	integer, character, single-precision floating point
+					number, double-precision floating point number
+	
+	keywords (datatype specifier) - int, char, float
+	
+	PDLC	-	Program Development Life Cycle
+	SDLC	-	Software Development Life Cycle
+	
+	1. Analysis	-	What?
+	2. Design	-	How? (use a 3rd variable/without using 3rd variable)
+	3. Code
+	4. Test
+	5. Intall/Integrate
+	
+	Factorial	-	Iteration/Recursion
+	
+	CASE	-	Computer Aided Software Engineering
+	
+	
+	Design 1:
+		read a, b;		a=10, b=20
+		c = a;			c=10, a=10, b=20
+		a = b;			c=10, a=20, b=20
+		b = c;			c=10, a=20, b=10
+		
+	Design 2:
+		read a, b;		a=10, b=20
+		a = a + b;		a=30, b=20
+		b = a - b;		a=30, b=10
+		a = a - b;		a=20, b=10
+	
+	Write a short note on 4 C's of P21 Framework.
+		
+		
+	
+	
+	
+	
+	
+	
