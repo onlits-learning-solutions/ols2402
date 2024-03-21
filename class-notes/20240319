@@ -1,0 +1,108 @@
+
+	year % 4 == 0 
+	and					leap year
+	year % 100 != 0
+	
+	or
+	
+	year % 400 == 0		leap year
+	
+	
+	1992
+	1993
+	2000
+	2024
+	1600
+	1700
+	
+	
+	Eliminate Business from Business application
+	Accounting
+	Inventory
+	Financial Period
+	
+	if(year % 4 == 0)
+		print "Leap Year";
+	else
+		print "Common Year";
+		
+	
+	if(year % 400 == 0)
+		print "Leap year"
+	else
+		if(year % 4 == 0)
+			if(year % 100 != 0)
+				print "Leap Year"
+			else
+				print "Common year"
+		else
+			print "Common year"
+			
+			
+	if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+		print "Leap Year"
+	else
+		print "Common Year"
+		
+	
+	(year % 4 == 0 && year % 100 != 0 || year % 400 == 0)? print 
+	"Leap Year" : print "Common Year";
+		
+		
+	x = (a > 10) ? 50 : 100;
+	
+	if(a > 10)
+		x = 50;
+	else
+		x = 100;
+	
+	
+	Verbose
+	Concise
+	
+	Principles
+	DRY	-	Don't Repeat Yourself
+	
+	10 + 10	=	20
+	
+	 10
+	+10
+	----
+	 20
+	----
+	
+	Laptop
+		Apple
+		IRIS
+		OLED
+	Phone
+		
+	Analysis
+	
+	Linus Torvalds
+		- Linux kernel
+		- Git - Tracks changes in our code - Version control system
+		
+		OLS2402
+	
+	Full stack developer
+	
+	
+	S	-	Strengths	
+	W	-	Weaknesses
+	O	-	Opportunities
+	T	-	Threats
+	
+	
+	Toy projects/program
+	
+	Chess 
+	
+	21 days	-	No fine
+	60 days	-	Rs. 2
+	> 1 year -	Rs. 10
+	
+	
+	50 Hours
+	
+	

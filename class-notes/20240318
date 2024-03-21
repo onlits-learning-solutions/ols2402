@@ -1,0 +1,75 @@
+
+	Informal
+		n = 12345
+		
+		d = n % 10 = 5
+		n = n / 10 = 1234
+		s = s + d
+		
+		d = n % 10 = 4
+		n = n / 10 = 123
+		s = s + d
+		
+		d = n % 10 = 3
+		n = n / 10 = 12
+		s = s + d
+		
+		d = n % 10 = 2
+		n = n / 10 = 1
+		s = s + d
+		
+		d = n % 10 = 2
+		s = s + d
+		
+		
+	Formal
+
+	Algorithm:
+	Step 1: Read n
+	Step 2: d = n % 10 = 5
+	Step 3:	n = n / 10 = 1234
+	Step 4:	s = s + d
+	
+	
+	1. Analysis	-	What?	-	Problem (1)
+	2. Design	-	How?	-	Solutions (n)
+	3. Coding
+	4. Testing -	Verify
+	
+	
+	Test Case 1:
+		input	=	12345
+		output	=	15
+		
+	Test Case 2:
+		input	=	99999
+		ouput	=	45
+		
+	Validation
+	
+	Fibonacci Series
+		0, 1, 1, 2, 3, 5, 8, ...
+		1, 1, 2, 3, 5, 8, 13, ...
+		
+	Factorial
+		
+	
+	
+	Rote learning
+	
+	Question?
+	
+	%d, %f, %p	-	Format/Control String
+	
+	Maturity
+	
+	Constraint	-	Limitation
+	
+	Jargon
+		Database
+		
+	github
+	
+	Framework
+	
+	
