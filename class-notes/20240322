@@ -1,0 +1,68 @@
+Characteristics of a good program:
+	1. Accuracy
+	2. Efficient
+	3. Robust
+	4. Readability
+	
+
+	1. Windows 11
+	2. Windows 10
+	3. Windows 8.1
+	4. Windows 8
+	5. Windows 7
+	6. Windows Vista (More memory, more processing power) 1GB
+	7. Windows XP	(256MB)
+	8. Windows ME
+	9. Windows 98SE
+	10. Windows 98
+	11. Windows 95
+	12. Windows 4.0 (Windows for workgroups)
+	Windows3.11, 3.1, 3.0, 2.0, 1.0
+	
+	int -	4 bytes	-	2 billion
+	
+	char mob[11]
+	
+	+918789995051
+	
+	\0	-	null character
+	
+	Cell phone
+	Mobile phone
+	
+	C is statically-type programming language (C++, Java, C#)
+	Python is a dynamically-typed programming language (JS, PHP)
+	
+	
+	int main(void)
+	{
+		int a;
+		float b;
+		printf("Enter a number: ");
+		
+		char c;		//not error anymore
+		
+		if()
+		{
+			int x;
+		
+		}
+	}
+	
+	Trade-off
+		Time-space trade-off
+	
+	512 GB
+	256 GB	-	1300	-	WD
+	
+	garbage value
+	
+	int	-	-32768 to 32767	=	2^16
+	
+	WAP to accept a number and display the name of day corresponding
+	to the number.
+	
+	1	-	Monday
+	2	-	Tuesday
+	
+	
