@@ -1,0 +1,41 @@
+
+	Modular
+		- Motherboard	-	Intel, MSI, Gigabyte, Asus
+		- CPU (processor) - Intel, AMD
+		- RAM			- Hynnix, Hyndai, Kingston, Transend
+		- HDD/SSD		- WD, Seagate
+		
+	Procedure (Function)
+	
+	Escape sequence / backslash character constant
+	
+	Dennis Ritchie
+	Brain Kernighan
+	
+	Recfactoring
+	
+	DRY:	Don't Repeat Yourself
+	
+	
+	  100			-	Augend		Subtrahend		Multiplicant
+	+ 200			-	Addend		Minuend			Multiplier
+	-------
+	  300			-	Sum			Difference		Product
+ 	-------
+	
+	*2)^11(5 - Quotient
+	    10
+	    --
+	     1	- Remainder
+	    --
+	    
+	 *Divisor
+	 ^Dividend
+	 
+	 Pedagogy
+	 
+	 Traning
+	 
+	 
+	 
+	 
