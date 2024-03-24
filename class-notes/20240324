@@ -1,0 +1,44 @@
+
+	Loop
+	
+	if(a>b && b>c)
+	
+	3!	=	6
+	5!	=	120
+	10! =	
+	
+	O(1)	-	Programmer
+	
+	O(n^2)	-	Terrible	-	here n^2 is rate of growth
+	
+	5	=	25
+	10	=	100
+	100 =	10000
+	
+	5	=	5
+	10	=	10
+	
+	
+	5	=	1
+	10	=	1
+	
+	Generic solution
+	
+	Array
+	
+	WAP to accept two integer and find their sum using arrays.
+	
+	Category 1: No arguments and no return value
+	Category 2: Accepts arguments with not return value
+	Category 3: Arguments and return a value
+	Category 4: No argument but returns a value
+	Category 5: Return multiple values
+	
+	HW - Cite 2-2 examples of each of the above categories of function.
+	
+		- printf(), scanf(), exit(), 
+		
+		
+	
+	
+	

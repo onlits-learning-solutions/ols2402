@@ -36,6 +36,42 @@
 	 
 	 Traning
 	 
+	 Arrays
+	 	A collection of similar elements
+	 	
+	 	Elements may simple:
+	 		- collection of marks (int)
+	 		- collection of prices (float)
+	 		- collection of age (int)
+	 		- collection of characters {string} (char)	- Special case
+	 	
+	 	Elements of complex type:
+	 		- collection of students (admno, rollno, name, dob)
+	 		- collection of stock item (id, name, brand, price)
+	 		
+	 	
+	 	1366 X 768 pixel	-	Resolution
+	 
+	 
+	 ForTran	-	Scientific Application
+	 COBOL		-	Common Business Oriented Language
+
+	 C			-	General-purpose	 
+	 Human Computer
+	 
+	 Can machines think?
+	 
+	 Iron man
+	 Hulk
+	 
+	 WAP to accept 3 integer and display them in ascending order.
+	 WAP to accept 5 integer and display them in ascending order.
+	 WAP to accept 10 integer and display them in ascending order.
+	 
+	 
+	 int n;
+	 
+	 sq = n * n;
 	 
 	 
 	 
