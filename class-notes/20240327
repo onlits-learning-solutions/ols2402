@@ -1,0 +1,93 @@
+HW - Cite 2-2 examples of each of the above categories of function
+     from 'C Standard Library'.
+     
+Free software	-	Can be used for free
+FOSS	-	Free and Open Source Software
+
+extern int printf (const char *__restrict __format, ...);		- Category 3
+
+In the above statement we have a keyword called 'extern' which is a storage class specifier.
+
+int a;
+a = printf("Hi!");
+
+DRY	-	Don't Repeat Yourself
+YAGNI - You aren't gonna need it
+
+Recursion	-	When a function calls itself it is called recursion
+
+5! = 5 X 4!	-	Recursive call
+4! = 4 X 3!	-	"
+3! = 3 X 2!	-	"
+2! = 2 X 1!	-	"
+1! = 1		-	Base Condition (Exit)
+
+
+int factorial(int n)
+{
+	if(n == 1)
+		return 1;		//Base Condition
+	
+	fact = n * factorial(n-1);
+	return fact;
+}
+
+LIFO
+
+factorial(5)
+{
+	fact = n * factorial(4)
+	{
+		fact = n * factorial(3)
+		{
+			fact = n * factorial(2)
+			{
+				fact = n * factorial(1)
+				{
+					return 1;
+				}
+				return 2;
+			}
+			return 6;
+		}
+		return 24;
+	} 
+	return 120;
+}
+
+
+	fibonacci	-	1,1,2, 3
+
+	fibonacci(n)	=	fibonacci(n-1) + fibonacci(n-2)
+	
+	Leanardo Da Vinci
+	
+	Meghalaya - Shillong
+	
+	Cleanest village in asia
+	
+	Cosmopololitan
+	
+	
+	Storage class:
+		auto
+		extern
+		static
+		register
+
+	int b;				//lifetime whole program
+	int main(void)
+	{
+		register signed int a;
+		test();
+		
+		
+	}
+	
+	void test(void)
+	{
+		int c;		//automatic signed variable
+	}
+
+
+	10001001	=	-128 to 127		(200)	8-bit
