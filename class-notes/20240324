@@ -28,9 +28,9 @@
 	
 	WAP to accept two integer and find their sum using arrays.
 	
-	Category 1: No arguments and no return value
-	Category 2: Accepts arguments with not return value
-	Category 3: Arguments and return a value
+	Category 1: No arguments and no return value (sum)
+	Category 2: Accepts arguments with not return value (fibonacci)
+	Category 3: Arguments and return a value (Area)
 	Category 4: No argument but returns a value
 	Category 5: Return multiple values
 	
@@ -39,6 +39,46 @@
 		- printf(), scanf(), exit(), 
 		
 		
+	Function is self-contained block of code to carry out a specific
+	task.
+	
+	Library function
+	User-defined function
+	
+	Black-box
+	
+	Reusability
+	Modularisation
 	
 	
+	- Count number of factors
+	- display the result on the basis of count of factors
 	
+	Coupling	-	inter-moulde	-	Low/Loose
+	Cohesion	-	intra-module	-	High/tight
+	
+	
+	Factorial function
+	
+	Function definition *
+		1. Function type	-	compulsory
+		2. Function name	-	compulsory
+		3. List of parameters/arguments	-	compulsory
+		4. Local variable declaration	-	optional
+		5. Function statement	-	compulsory
+		6. Return statement	-	optional
+	Function declaration/prototype
+	Function call
+	
+	
+	* First three function definition elements are collectively
+	  known as function header and the rest constitute function body.
+	  
+	  
+	  Datatypes:
+	  	- primitive/primary/built-in
+	  		int, char, float, double, void
+	  	- derived data type
+	  		array, function, pointer
+	  	- user-defined
+	  		struct, union, enum, typedef
