@@ -1,0 +1,40 @@
+
+ Character Encoding System
+ 	- BCD	-	Binary Coded Decimal (4-bit) - 16-characters
+ 	- EBCD	-	Extended Binary Coded Decimal (6-bit) - 64-characters
+ 	- EBCDIC -	Extended Binary Coded Decimal Instruction Code (8-bit)
+ 	- ASCII -	American Standard Code for Information Interchange
+ 				(8-bit) - 256 character
+ 	- Unicode - 8-bit/16-bit/32-bit (16-bit - 65536 characters)
+ 	
+ 	
+ 	char	-	8-bit (C) - ASCII / 16-bit (Java) - UTF16
+ 	byte	-	8-bit char in Java
+ 	
+ 	Project Scheduling
+ 		- PERT Chart
+ 		- Gantt Chart
+ 		
+ 	print formatted-string
+ 	
+ 	puts("Hello!");
+ 	printf("Your age is %d.", age);
+ 	
+ 	Form 21
+ 	
+ 	ForTran	-	Scientific Application
+ 	Cobol	-	Common Business Oriented Language
+ 	
+ 	C		-	General Purpose
+ 	
+ 	
+ 	Library
+ 		- Standard Library
+ 		- Custom Library 
+ 		
+ 	
+ 	Learning/Experiment Code
+ 	Production	-	No bug/ Fast release
+ 	
+ 	
+ 	

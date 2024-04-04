@@ -1,0 +1,71 @@
+
+	- Return multiple values
+	
+	Division	-	Quotient/Remainder
+	
+	/	-	quotient
+	%	-	remainder
+	
+	Reinventing the wheel
+	
+	Motor
+	
+	Self-priming Pump
+	Submersible pump
+	
+	
+	q = a/b;
+	
+	q = quotient(a, b);
+	
+	sq = sqrt(n);
+	c = cos(x);
+	
+	swapping
+	
+	- Accept two integers
+	- Return two integers
+	
+	
+	\0
+	strlen()
+	
+	123 % 10	=	3
+	123 / 10	=	12
+	
+	12 % 10		=	2
+	12 / 10		=	1
+	
+	1 % 10		=	1
+	1 / 10		=	0
+	
+	
+	while (n > 0)
+	{
+		d = n % 10;
+		n /= 10;
+		.
+		.
+		.
+	}
+	
+	
+	int main(void)
+	{
+		int n = 123;
+		
+		printf("The reverse of %d is %d.\n", n, reverse(n));
+	}
+	
+	reverse(int n)
+	{
+	
+	}
+	
+	String -	A group/collection of characters is known as string.
+	In c strings are represented as char array
+	
+	ABCDE1234C
+	
+	C++ is superset of C (All the features of C + OOP features)
+	
