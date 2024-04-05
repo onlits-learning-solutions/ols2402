@@ -1,0 +1,42 @@
+
+	Library Management System
+	
+	Main Menu
+	1. Maintain book record
+	2. Create Members
+	3. Issue Book
+	4. Book Return
+	
+	Enter your choice: [1]
+	
+	Book Title:	Let Us C
+	Author:	Yashwant Kanetkar
+	Edition: Third
+	Publisher: BPB Publishers
+	ISBN: 
+	ISBN13: 
+	Pages: 800
+	
+	What is new in your study?
+	
+	Literature review/study
+	
+	Buffer - Temporary storage
+	
+	Standard library function for string manipulation:
+		- strlen
+		
+		
+	S24001
+	
+	batchCode = "OLS2401";
+	batchCode += 1;	//error
+	
+	int sub = (int) substr(5, 2);
+	sub += 1;
+	
+	strcat()
+	
+	Array is a collection of similar/homogenous elements.
+	Structure is a collection of heterogenous elements related a entity.
+	
