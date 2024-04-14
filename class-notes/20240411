@@ -1,0 +1,62 @@
+
+	Software: Information and data in the form of a signal.
+	
+	A set of program(s)
+	
+	a) Analysis	-	Understand the problem
+	b) Design	-	Data Structure + Algorithm
+	c) Coding
+	d) Testing
+	
+	census
+	
+	Steve Jobs
+	
+	- Orientation	- 1 day (1st day of academic session)
+	- Fresher Meet	- 1 day (Held for 1st year students - departmentwise) - Students
+	- College Week	- 6 days
+	- Tech Fest		- 3 days	
+	- Farewell party- 1 day (Outgoing final sem students)	-	Students
+	
+	Funds:
+	
+	Sl#		Date	Name		Amount
+	
+	
+	Expense:
+	
+	Sl#		Date	Particular		Amount
+	
+	Census 2011
+	
+	city (char[])	population(long int)	literacy level(float)
+	Muzaffarpur		354462					83.07
+	Patna			1684222					83.37
+	Chapra			202352					78.47
+	Darbhanga		296039					79.40
+	Motihari		126158					84.91
+	
+	
+	- Global variable
+	- Parameter Passing
+	
+	
+	
+	void fun(int fun2() {
+	
+	})
+	{
+	
+	
+	}
+	
+	- Real
+	- Fictional
+	
+	DBMS-	Database Management System
+	DBA -	Database Administrator
+	
+Muzaffarpur
+354462
+83.07
+	
