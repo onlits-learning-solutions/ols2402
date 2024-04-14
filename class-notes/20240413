@@ -1,0 +1,29 @@
+
+ %d - decimal integer
+ %i - decimal, octal(0171), hexadecimal(0x1af)
+ %x - hexadecimal
+ %p	- 64-bit equivalent hexadecimal
+ 
+ Programming
+ 
+ DS A
+ 
+ int a = 10;
+ 
+ 00000000 00000000 00000000 0001010
+ 
+ Bitwise operators
+ 
+ Jargon
+ 
+ A = 65
+ B = 66
+ a = 97
+ 
+ -ve
+ 0
+ +ve
+ 
+ -1
+ 0
+ 1

@@ -1,0 +1,95 @@
+
+	Store date in a variable.
+	
+	date today;
+	printf("Enter todays date: ");
+	scanf("%d/%d/%d", &today.day, &today.month, &today.year)
+	
+	
+	05/04/2024 or	05-04-2024
+	
+	Due date
+	
+	primitive	-	int, char, float etc.
+	derived		-	array, pointer, function
+	user-defined -  structure, union, enumeration (list of constant)
+	
+	#define RED 0
+	#define GREEN 1
+	#define YELLOW 2
+	
+	int const RED=0, GREEN=1, YELLOW=2;
+	
+	enum COLOR = {RED, GREEN, YELLOW};
+	
+	if(COLOR.RED)
+	
+	
+	typedef int marks;
+	marks eng, hin;
+	
+	
+	struct date
+	{
+		int day;
+		int month;
+		int year;
+	};
+	
+	enum PRIORITY = {NONE, LOW, MEDIUM, HIGH};
+	
+	struct todo
+	{
+		int todoid;
+		char title[50];
+		date duedate;
+		char priority;
+		char notes[100];
+	};
+	
+	int main(void)
+	{
+		newtodo();
+	}
+	
+	void newtodo()
+	{
+		todo t[10];
+		t[i].todoid = 1;
+		t[i].title = "Visit motijheel to get school shoes";
+	}
+	
+	
+	Entity/Object
+	
+	Iarbor Majaw
+	
+	Chandrashekhar Koch
+	
+	Suman Sarkar
+	
+	Sanjok Sharma
+	
+	DBMS
+	
+	Object Oriented Programming
+		class
+		
+	Encapsulation
+	Abstraction
+	Inheritance
+	Polymorphism
+	
+	WAP to accept a date and display it.
+		List of functions:
+			- Input/accept date
+			- Display
+			- main - starting point
+			
+	Toy program
+	
+	- global variable
+	- pass parameters
+	
+		
+	
