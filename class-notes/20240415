@@ -1,0 +1,77 @@
+
+ File handling
+ 
+ Toy program
+ 
+ Persist
+ 
+ Over the counter
+ Prescribed
+ 
+ Rx
+ Primary Memory:
+ 
+ RAM
+ 	- Random Access Memory
+ 	- Volatile
+ 	- Temporary
+ 
+ ROM
+ 	- Read Only Memory
+ 	- Non-volatile
+ 	- Permanent
+ 
+ Secondary
+ 	Drum
+ 	Tapes
+ 	Magnetic Disk (Floppy, Hard disk)
+ 	CD
+ 	Pen drives, Memory cards
+ 	SSD
+ CPU
+ 
+ Text data: Data made up of characters (bytes)
+ 	Sequential Access
+ 	Random Access
+ 
+ Bits - images, audio
+ 
+ MS-Paint default file type: .png (before .bmp)
+ .jpg, .gif
+ Yahoo.com
+ 
+ 
+ int main(int argc, char *argv[])
+ 
+ 
+ Refactoring
+ 
+ 	Perfection
+ 	
+ File Attributes:
+ 	Name
+ 	Type
+ 	Size
+ 	.
+ 	.
+ 	.
+ 	
+ 	int, char	-> simple types
+ 	int[], char[] -> list
+ 	struct
+ 
+ New paradigm
+ 
+ POP
+ OOP
+ 
+ Learn by translation:
+ 	C -> python
+ 	C -> C++
+ 	C -> Java
+ 	C -> PHP
+ 	C -> JS
+ 	C -> C#
+ 	
+ 	All C programs are C++ program but the opposite is not.
+ 	
