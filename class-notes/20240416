@@ -1,0 +1,35 @@
+
+	More than plain text records are stored.
+	
+	Expense tracker:
+		- Expense
+			- Name
+			- Type
+			- Description
+		- Transaction
+			- Id
+			- Date
+			- Name
+			- Description
+			- Amount
+	
+	Master			-		Expenses	
+	Transaction		-		
+	
+	Mobile Recharge
+	
+	
+	Rs. 12	-	2L
+	PA cover	-	15L
+	
+	
+	Name				Type	Description
+	Mobile Recharge		Misc	
+	Conveyance			Misc	Expenses like bus/train fare. Travelling
+	
+	Id	Date			Name				Desc	Amount
+	1	16/04/2024		Mobile Recharge				599
+	2	16/04/2024		Conveyance					50
+	
+	Development
+	Production
