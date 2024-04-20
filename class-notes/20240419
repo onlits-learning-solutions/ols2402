@@ -1,0 +1,89 @@
+
+ Compiled Languages
+ 	C, C++
+ 
+ Interpreted Languages
+ 	Python, PHP, JS
+ 
+ Hybrid Languages
+ 	Java, C#
+ 	
+ Low level languages
+ 	Machine language, Assembly language
+ High level languages
+ 	C, C++, Java, Python, PHP etc.
+ 	
+ 	
+ Computer + Windows
+ Computer + Linux
+ 
+ ADD R1, 10
+ 
+ Hinglish
+ 
+ Simplism
+ Simplicity
+ 
+ Compatible
+ 
+ Python3 is not fully compatible with older versions.
+ 
+ 2.5l lines of c code. (Sqlite)
+ 
+ Programming languages may be classified into two categores
+ based on their type-declaration characteristics:
+ 	- Statically-typed language
+ 		C, C++, Java, C#, TypeScript etc.
+ 	- Dynamically-typed language
+ 		python, php, JS
+ 	
+ 	1997						2016
+ RAM -	1 MB				RAM	-	8GB
+ CPU -	66 MHz				CPU -	3 Ghz Multi core HT (4)
+ 
+ 
+ PHP	-	Personal HomePage Tools
+ PHP	-	PHP:Hypertext Preprocessor
+ 
+ Bing	-	Bing is not google
+ 
+ GNU	-	GNU is not Unix
+ 
+ PHP is a server-side scripting
+ It was created to help HTML
+ 
+ 
+ typedef struct date
+ {
+ 	int dd;
+ 	int mm;
+ 	int yyyy;
+ }DATE;
+ 
+ 
+ void newdate(DATE *date)
+ {
+ 
+ 
+ }
+ 
+ 
+ class Date {
+ 	private int dd;
+ 	private int mm;
+ 	private int yyyy;
+ 	
+ 	public void newDate() {
+ 	
+ 	
+ 	}
+ }
+ 
+ Intermediate Code	-	Bytecode (Java), MSIL code (C#)
+ 
+ 
+ 
+ 
+ 
+ 
+ 

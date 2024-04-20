@@ -1,0 +1,31 @@
+ char names[10][50];
+ bit-level programming
+ unit testing
+ database programming
+ 
+ 1. MS-Office
+ 2. Google (docs, slide, sheet)
+ 3. WPS office
+ 4. Libre office
+ 
+ Home & Student Edition
+ 
+ Project
+ 	Library
+ 	
+ All C programs are C++ program but the oppostive is not true.
+ 
+ Multi-paradigm
+ 	POP & OOP
+ 	
+ printf() - printf() is a predefined function which represents
+ 			standard out unit (screen/monitor)
+ scanf() -  scanf() is a predefined function which represents
+ 			standard input unit (keyboard)
+ 			
+ cout - 	cout is a predefined object which represents
+ 			standard out unit (screen/monitor)
+ cin -  	cin is a predefined object which represents
+ 			standard input unit (keyboard)
+ 			
+ BJarne Stroustrup = The father of C++
