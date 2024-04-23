@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+	char str[100];
+	printf("Enter a string: ");
+	scanf("%s", str);
+	printf("The reverse of %s is %s.", strrev(str));
+	return 0;	
+}
+
+Windows 95
+Windows 98
+Windows Me (2000)
+Windows Xp
+Windows Vista
+Windows
+
+CPU	-	Celeron	-	1GHz
+RAM -			-	64 MB + 128 MB = 192 MB
+HDD -			-	20 GB => 40 GB
+
+XP	-	(M) 128 MB (R) 256 MB
+
+Vista	=	Multicore CPU
+RAM		=	1 GB
+
+Files - Challeges
+
+DBMS in C
+
+
