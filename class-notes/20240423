@@ -1,0 +1,74 @@
+
+	Project:
+		Analysis (What is the problem?)
+			- Problem statement
+			
+			
+	
+	In the region where I am staying there are a number libraries.
+	Some of them are integrated with an educational institute like
+	school, colleges etc. The are some which are independent run by
+	private people/organisation. Most of them are still using the 
+	tradition pen-paper method for keep records. We know that pen-paper
+	based record keeping process is slow and in-efficient. Moreover, it
+	fails to cater usefully to todays tech-savvy readers.
+	
+	In order to take care of the above mention issues, we may develop
+	a customised software.
+	
+	 Feasibility Analysis:
+	 	Economic feasibility
+	 	Technical feasibility
+	 	Operational feasibitity
+	 
+	 
+	 C
+	 Python
+	 Java
+	 JS
+	 
+	 Cloud Computing
+	 Devops
+	 
+	 Feature:
+	 	1. New books
+	 		id
+	 		title
+	 		author
+	 		edition
+	 		publication
+	 		pages
+	 		isbn
+	 		price
+	 		
+	 	2. New members
+	 		id
+	 		name
+	 		gender
+	 		dob
+	 		address
+	 		mobile
+	 		email
+	 		
+	 	3. Book issue
+	 		tid
+	 		date
+	 		returnbydate
+	 		bookid
+	 		memberid
+	 	4. Book return
+	 		returndate
+	 		
+	 	Waterfall
+	 		Analysis
+	 		Design
+	 		Coding
+	 		Testing
+	
+	unit testing
+	
+	delimiter
+	
+	csv	-	comma separated values
+	
+	
