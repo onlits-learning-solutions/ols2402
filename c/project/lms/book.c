@@ -43,10 +43,15 @@ void newbook()
 
 void getbooks()
 {
-
+    BOOK book;
+    FILE *fp;
+    fp = fopen("lms.dat", "r");
+    fscanf(fp, "%d,%s,%s,%s,%s,%d,%s,%f\n", &book.id, book.title, book.author, book.edition, book.publication, &book.pages, book.isbn, &book.price);
+    printf("%d\t%s\t%s\t%s\t%s\t%d\t%s\t%f\n", book.id, book.title, book.author, book.edition, book.publication, book.pages, book.isbn, book.price);
+    fclose(fp);
 }
 
 void getbook(int id)
 {
-    
+
 }

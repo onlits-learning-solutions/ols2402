@@ -2,6 +2,7 @@
 
 int main(void)
 {
-    newbook();
+    // newbook();
+    getbooks();
     return 0;
 }
