@@ -2,7 +2,6 @@
 This module belongs to LMS project
 */
 #include <stdio.h>
-#include "common.c"
 
 #define FILENAME "book.dat"
 
@@ -17,6 +16,46 @@ typedef struct book
     char isbn[14];
     float price;
 } BOOK;
+
+void newbook();
+void getbooks();
+void getbook(int id);
+
+void bookmenu()
+{
+    int exit = 0;
+    while (1)
+    {
+        int ch;
+        printf("BOOK MENU\n");
+        printline(15);
+        printf("1. New Book\n");
+        printf("2. Display All Books\n");
+        printf("3. Display Book by Id\n");
+        printf("4. Edit Book\n");
+        printf("5. Delete Book\n");
+        printline(15);
+        printf("Enter choice (0 to exit): ");
+        scanf("%d", &ch);
+        switch (ch)
+        {
+        case 0:
+            exit = 1;               //refactor this logic
+            break;
+        case 1:
+            newbook();
+            break;
+        case 2:
+            getbooks();
+            break;
+        default:
+            printf("\n\nInvalid Option\n\n");
+            break;
+        }
+        if (exit == 1)
+            break;
+    }
+}
 
 void newbook()
 {
@@ -52,7 +91,7 @@ void getbooks()
     printline(160);
     printf("%-10s%-30s%-30s%-20s%-30s%-10s%-20s%-10s\n", "Book Id", "Title", "Author", "Edition", "Publication", "Pages", "ISBN", "Price");
     printline(160);
-    for (int i = 1; i <= 3; i++)
+    for (int i = 1; i <= 4; i++)
     {
         fscanf(fp, "%d,%[^,],%[^,],%[^,],%[^,],%d,%[^,],%f\n", &book.id, book.title, book.author, book.edition, book.publication, &book.pages, book.isbn, &book.price);
         printf("%-10d%-30s%-30s%-20s%-30s%-10d%-20s%-10.2f\n", book.id, book.title, book.author, book.edition, book.publication, book.pages, book.isbn, book.price);
