@@ -2,24 +2,7 @@
 This module belongs to LMS project
 */
 #include <stdio.h>
-
-#define FILENAME "book.dat"
-
-typedef struct book
-{
-    int id;
-    char title[50];
-    char author[50];
-    char edition[20];
-    char publication[50];
-    int pages;
-    char isbn[14];
-    float price;
-} BOOK;
-
-void newbook();
-void getbooks();
-void getbook(int id);
+#include "library.h"
 
 void bookmenu()
 {
@@ -77,7 +60,7 @@ void newbook()
     scanf("%s", book.isbn);
     printf("Enter Price: ");
     scanf("%f", &book.price);
-    fp = fopen(FILENAME, "a");
+    fp = fopen(BOOK_FILE, "a");
     fprintf(fp, "%d,%s,%s,%s,%s,%d,%s,%f\n", book.id, book.title, book.author, book.edition, book.publication, book.pages, book.isbn, book.price);
     fclose(fp);
     printf("\nBook record saved!\n\n");
@@ -87,7 +70,7 @@ void getbooks()
 {
     BOOK book;
     FILE *fp;
-    fp = fopen(FILENAME, "r");
+    fp = fopen(BOOK_FILE, "r");
     printline(160);
     printf("%-10s%-30s%-30s%-20s%-30s%-10s%-20s%-10s\n", "Book Id", "Title", "Author", "Edition", "Publication", "Pages", "ISBN", "Price");
     printline(160);

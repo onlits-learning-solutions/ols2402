@@ -3,8 +3,7 @@ This file will serve as the entry point of LMS
 */
 #include <stdio.h>
 #include <stdlib.h>
-#include "common.c"
-#include "book.c"
+#include "lib/library.h"
 
 int main(void)
 {

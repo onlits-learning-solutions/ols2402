@@ -1,0 +1,33 @@
+
+	Library will consist of compiled program.
+	
+	C Compiler machine code generation process
+		1. Pre-processor
+		2. Compiler
+		3. Assembler
+		4. Linker
+		
+		
+	-v = verbose
+	
+	Library (is a collection of pre-compiled object files)
+		- Standard (Supplied with SDK)
+		- Custom (Personalised library)
+		
+	Static Library
+	Shared Library
+		
+		
+	SDK	-	Software Development Kit
+	JDK -	Java Development Kit
+	
+	Wildcard
+	
+	.a	-	static library
+	
+	.so	-	linux - dynamic library
+	.dll-	windows - dynamic library
+	
+	Deployment - Software intallment
+	
+	
