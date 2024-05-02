@@ -23,13 +23,21 @@ void bookmenu()
         switch (ch)
         {
         case 0:
-            exit = 1;               //refactor this logic
+            exit = 1; // refactor this logic
             break;
         case 1:
             newbook();
             break;
         case 2:
             getbooks();
+            break;
+        case 3:
+            int id;
+            printline(30);
+            printf("Enter book id: ");
+            scanf("%d", &id);
+            getbook(id);
+            printline(30);
             break;
         default:
             printf("\n\nInvalid Option\n\n");
@@ -74,9 +82,8 @@ void getbooks()
     printline(160);
     printf("%-10s%-30s%-30s%-20s%-30s%-10s%-20s%-10s\n", "Book Id", "Title", "Author", "Edition", "Publication", "Pages", "ISBN", "Price");
     printline(160);
-    for (int i = 1; i <= 4; i++)
+    while ((fscanf(fp, "%d,%[^,],%[^,],%[^,],%[^,],%d,%[^,],%f\n", &book.id, book.title, book.author, book.edition, book.publication, &book.pages, book.isbn, &book.price) != EOF))
     {
-        fscanf(fp, "%d,%[^,],%[^,],%[^,],%[^,],%d,%[^,],%f\n", &book.id, book.title, book.author, book.edition, book.publication, &book.pages, book.isbn, &book.price);
         printf("%-10d%-30s%-30s%-20s%-30s%-10d%-20s%-10.2f\n", book.id, book.title, book.author, book.edition, book.publication, book.pages, book.isbn, book.price);
     }
     printline(160);
@@ -85,4 +92,33 @@ void getbooks()
 
 void getbook(int id)
 {
+    BOOK book;
+    int found = 0;
+    FILE *fp;
+    fp = fopen(BOOK_FILE, "r");
+    while ((fscanf(fp, "%d,%[^,],%[^,],%[^,],%[^,],%d,%[^,],%f\n", &book.id, book.title, book.author, book.edition, book.publication, &book.pages, book.isbn, &book.price) != EOF))
+    {
+        fscanf(fp, "%d,%[^,],%[^,],%[^,],%[^,],%d,%[^,],%f\n", &book.id, book.title, book.author, book.edition, book.publication, &book.pages, book.isbn, &book.price);
+        if (book.id == id)
+        {
+            found = 1;
+            break;
+        }
+    }
+    if (found)
+    {
+        printf("Id: %d\n", book.id);
+        printf("Title: %s\n", book.title);
+        printf("Author: %s\n", book.author);
+        printf("Edition: %s\n", book.edition);
+        printf("Publication: %s\n", book.publication);
+        printf("Pages: %d\n", book.pages);
+        printf("ISBN: %s\n", book.isbn);
+        printf("Price: %1.2f\n", book.price);
+    }
+    else
+    {
+        printf("\nBook not found!\n\n");
+    }
+    fclose(fp);
 }
