@@ -28,8 +28,11 @@ int main(void)
         case 1:
             bookmenu();
             break;
-        default:
+        case 2:
+            membermenu();
             break;
+        default:
+            printf("\nInvalid option!\n\n");
         }
     }
     
