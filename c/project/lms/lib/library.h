@@ -23,6 +23,18 @@ void getbooks();
 void getbook(int id);
 
 //---------------------- Member Module
+
+typedef struct member
+{
+    int id;
+    char name[50];
+    char gender[10];
+    char dob[15];
+    char address[50];
+    char contact[15];
+    char email[20];
+} MEMBER;
+
 void membermenu();
 void newmember();
 void getmembers();
