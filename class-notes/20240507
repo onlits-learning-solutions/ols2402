@@ -1,0 +1,37 @@
+
+	POP	-	Not much thought on complex types
+	OOP -	Based on complex types
+	
+	typedef struct employee
+	{
+		int id;
+		char name[5];
+	} EMPLOYEE;
+	
+	struct node
+	{
+		EMPLOYEE employee;
+		struct node *next;
+	}
+	
+	- Pointer
+	- Dynamic Memory Allocation
+	
+	1. Basic
+	2. Decisions
+	3. Loop
+	4. Function
+	5. Structure
+
+-------------------------------------------
+	1. Arrays
+	2. Pointers
+	
+	
+	Figma - Wireframe tool
+	Deploy
+	
+	Product -	Microsft, Google, Amazon, Flipkart, Swiggy, Zomato
+	Service	-	TCS, Infosys
+	
+	
