@@ -1,0 +1,50 @@
+
+	ISRO
+	
+	Theory of Computer Science
+	Computer Oriented Numerical Methods
+	
+	11
+	
+	pointer to pointer
+	
+	int **p;
+	int *a;
+	
+	a	-	value of a
+	&a	-	address of a
+	
+	*p	-	value at the address to which p is pointer
+	p	-	value of p which is the address of location to which pointer
+			is pointing.
+	&p	-	address of p
+	
+	
+	p = &a;		address of a static location
+	p = (int *)malloc(sizeof(int));	address of a dynamic location
+	
+	*p = 10;
+	
+	DRY	-	Don't Repeat Yourself
+	Refactor
+	
+	Technical Interview
+	Personal Interview
+	
+	911
+	
+	Travelling Salesman Algorithm
+	
+	STL	-	Standard Template Library
+	
+	
+	list is an object
+	node is an object
+	
+	Composition
+	
+	Rocket
+	Shuttle
+	
+	
+	

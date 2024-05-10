@@ -14,6 +14,8 @@ typedef struct list
 
 void display(NODE *head);
 void append(NODE **itr, int value);
+void search(NODE *itr, int value);
+void update(NODE *itr, int oldvalue, int newvalue);
 void printline(int n);
 
 int main(void)
@@ -21,13 +23,15 @@ int main(void)
     LIST list;
     NODE *head = NULL;
 
-    int ch, value;
+    int ch, value, oldvalue;
 
     while (1)
     {
         printf("\nMAIN MENU\n");
         printf("1. Display List\n");
         printf("2. Add to List\n");
+        printf("3. Search List\n");
+        printf("4. Update List\n");
         printf("Enter choice (0 to exit): ");
         scanf("%d", &ch);
         switch (ch)
@@ -43,6 +47,18 @@ int main(void)
             printf("\nEnter an integer value: ");
             scanf("%d", &value);
             append(&head, value);
+            break;
+        case 3:
+            printf("\nEnter an integer value: ");
+            scanf("%d", &value);
+            search(head, value);
+            break;
+        case 4:
+            printf("\nEnter old value: ");
+            scanf("%d", &oldvalue);
+            printf("\nEnter new value: ");
+            scanf("%d", &value);
+            update(head, oldvalue, value);
             break;
         default:
             printf("\nInvalide Option\n\n");
@@ -83,7 +99,7 @@ void append(NODE **head, int value)
 
     NODE *itr = *head;
     NODE *new = NULL;
-    do          //Finds the last node
+    do // Finds the last node
     {
         new = itr;
         itr = itr->next;
@@ -93,7 +109,51 @@ void append(NODE **head, int value)
     new->next->data = value;
     new->next->next = NULL;
     printf("\nNode added!\n\n");
+}
 
+void search(NODE *itr, int value)
+{
+    int found = 0;
+    if (itr == NULL)
+    {
+        printf("\nList is empty. search aborted!\n");
+        return;
+    }
+
+    do
+    {
+        if (itr->data == value)
+        {
+            found = 1;
+            break;
+        }
+        itr = itr->next;
+    } while (itr != NULL);
+
+    found == 1 ? printf("\nData found!\n\n") : printf("\nData not found!\n\n");
+}
+
+void update(NODE *itr, int oldvalue, int newvalue)
+{
+    int found = 0;
+    if (itr == NULL)
+    {
+        printf("\nList is empty. Nothing to update!\n");
+        return;
+    }
+
+    do
+    {
+        if (itr->data == oldvalue)
+        {
+            found = 1;
+            itr->data = newvalue;
+            break;
+        }
+        itr = itr->next;
+    } while (itr != NULL);
+
+    found == 1 ? printf("\nData update!\n\n") : printf("\nData not found!\n\n");
 }
 
 void printline(int n)
