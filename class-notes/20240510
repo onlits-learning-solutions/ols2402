@@ -1,0 +1,55 @@
+
+	8789995051
+	
+	Key/index
+	
+	Linear search
+	
+	Binary search
+		sorted
+	
+	category 1
+		int
+		float
+		double
+	
+	category 2
+		value type			- store values (int, float, udt)	
+		reference type		- stores address (pointer)
+		
+	self-referential structure
+	
+	MERN	=	MongoDB Express.JS React.Js Node.JS
+	
+	Full stack web development framework
+	
+	Paradigm	-	Principal/Technique
+	
+	NODE n1, n2;
+	
+	n2 = n1;	//not possible in c but is possible in c++
+	
+	n2.data = n1.data;
+	
+	Easter Egg
+	
+	Algorithmic efficiency
+		function
+			Big Omega
+			Big Theta
+			Big O
+		
+		Linear search - O(n)
+		Binary search - O(log n)
+		
+		Best case
+		Worse case
+		Average case
+		
+	Charles Babbage
+	
+	Assumptions
+		- No duplicates accepted
+	
+	Schema & layers
+	
