@@ -1,0 +1,20 @@
+
+	Roadmap
+	
+	design a login screen and registration screen
+	Registration screen Name, Mobile No, Age, Address, state, city. 
+	city drop down should change of state section change after login 
+	candidate will call Api
+	https://dog.ceo/api/breeds/image/random 
+	This API will return random dog images and every time screen open it
+	should change
+	Login page should contain login id and password 
+	Note: MVC follow
+	
+	HTML is interpreted by browser.
+	
+	<h1>Heading 1</h1>
+	<p>This is a paragraph</p>
+	<a href="another-page.html">This is link to another page</a>
+	
+	memberwise_sales_breakup

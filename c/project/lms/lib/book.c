@@ -2,6 +2,7 @@
 This module belongs to LMS project
 */
 #include <stdio.h>
+#include <stdlib.h>
 #include "library.h"
 
 void bookmenu()
@@ -29,7 +30,7 @@ void bookmenu()
             newbook();
             break;
         case 2:
-            getbooks();
+            displaybooks();
             break;
         case 3:
             int id;
@@ -74,20 +75,63 @@ void newbook()
     printf("\nBook record saved!\n\n");
 }
 
-void getbooks()
+NODE *getbooks()
 {
     BOOK book;
+    NODE *head = NULL, *itr = NULL;
     FILE *fp;
     fp = fopen(BOOK_FILE, "r");
+    int i = 0;
+    while ((fscanf(fp, "%d,%[^,],%[^,],%[^,],%[^,],%d,%[^,],%f\n", &book.id, book.title, book.author, book.edition, book.publication, &book.pages, book.isbn, &book.price) != EOF))
+    {
+        if (head == NULL)
+        {
+            head = (NODE *)malloc(sizeof(NODE));
+            head->data = book;
+            head->next = NULL;
+            printf("Aal is well!");
+            printf("\n\ngetbooks() if block!\n\n");
+            printf("\n%s\n\n", head->data.title);
+        }
+        else
+        {
+            itr = head;
+            do
+            {
+                itr = itr->next;
+            } while (itr->next != NULL);
+            itr = (NODE *)malloc(sizeof(NODE));
+            itr->data = book;
+            itr->next = NULL;
+            printf("\n\ngetbooks() else block!\n\n");
+        }
+    }
+    fclose(fp);
+    return head;
+}
+
+void displaybooks()
+{
+    NODE *head = NULL;
+    head = getbooks();
+    
+    if (head == NULL)
+    {
+        printf("\nBooks database empty.\n\n");
+        return;
+    }
+    
     printline(160);
     printf("%-10s%-30s%-30s%-20s%-30s%-10s%-20s%-10s\n", "Book Id", "Title", "Author", "Edition", "Publication", "Pages", "ISBN", "Price");
     printline(160);
-    while ((fscanf(fp, "%d,%[^,],%[^,],%[^,],%[^,],%d,%[^,],%f\n", &book.id, book.title, book.author, book.edition, book.publication, &book.pages, book.isbn, &book.price) != EOF))
+
+    NODE *itr = head;
+    do
     {
-        printf("%-10d%-30s%-30s%-20s%-30s%-10d%-20s%-10.2f\n", book.id, book.title, book.author, book.edition, book.publication, book.pages, book.isbn, book.price);
-    }
+        printf("%-10d%-30s%-30s%-20s%-30s%-10d%-20s%-10.2f\n", itr->data.id, itr->data.title, itr->data.author, itr->data.edition, itr->data.publication, itr->data.pages, itr->data.isbn, itr->data.price);
+        itr = itr->next;
+    } while (itr != NULL);
     printline(160);
-    fclose(fp);
 }
 
 void getbook(int id)

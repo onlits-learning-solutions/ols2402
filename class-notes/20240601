@@ -1,0 +1,39 @@
+Objects in database:
+	1. Database
+	2. Table (Relation)
+	3. View
+	4. Index
+	
+	
+Multiple view of data (Security)
+
+Features of LMS:
+	1. Manage Books, Catalogue, Barcode
+	2. Maintain Books Stock, Vendors
+	3. Issue / Return Books for Students, Staff and Members
+	4. Generate MIS Reports in Excel and Pdf
+	5. Generte Library Id Cards
+	6. Take Auto back and Restore
+	7. Manage Income and Expense (Accounting)
+	
+	What is new in you solution?
+	
+CREATE TABLE member
+(
+id INT PRIMARY KEY,
+name VARCHAR(50),
+gender VARCHAR(10),
+dob DATE,
+address VARCHAR(50),
+contact CHAR(10),
+email VARCHAR(50)
+);
+
+C	-	Create
+R	-	Read	X
+U	-	Update
+D	-	Delete
+
+INSERT INTO book VALUES(1, 'Let Us C', 'Yashwant Kanetkar', 'Third', 'BPB Publication', 771, '5489745896', 300);
+
+

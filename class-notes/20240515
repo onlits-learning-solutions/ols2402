@@ -1,0 +1,36 @@
+
+	goto: change the sequence of a program unconditionally.
+	
+	if(condition)
+	
+	Full stack web developer passionately interested in developing
+	scalable web applications.
+	
+	ecommerce
+	railway
+	
+	BASIC
+	
+	10 INPUT "ENTER A NUMBER:", A
+	20 INPUT "ENTER ANOTHER NUMBER:", B
+	30 C = A + B
+	40 PRINT "THE SUM IS: ", C
+	
+	In Java you cannot use goto although it is a reserved word.
+	
+	enum	-	A list of constants
+	
+	Bottom-up approach
+		Collect the parts
+		Assemble into product/solution
+		
+	Top-down approach
+		- View of a product/solution
+		- Keep on breaking the solution into parts until required.
+		
+		
+	Book b1, b2, b3;
+	
+	b3 = b1 + b2;
+	
+	ArrayList

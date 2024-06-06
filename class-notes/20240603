@@ -1,0 +1,20 @@
+
+	Facebook
+	Youtube
+	Gmail
+	Linked In
+	Twitter/X
+	
+	Schema: The description of database
+	
+	General database theory
+	
+	Train No. & Name
+	Journey from & To
+	Boarding from & To		-	Schema change
+	Date of Journey
+	Name
+	Age
+	Gender
+	Berth Preference		-	Schema change
+	Meal Preference			-	Schema change

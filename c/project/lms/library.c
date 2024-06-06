@@ -31,6 +31,12 @@ int main(void)
         case 2:
             membermenu();
             break;
+        case 3:
+            printf("Under Construction... \n\n");
+            break;
+        case 4:
+            printf("Under Construction ...\n\n");
+            break;
         default:
             printf("\nInvalid option!\n\n");
         }

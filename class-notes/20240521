@@ -1,0 +1,52 @@
+
+	Files
+		-	Security
+		-	Concurrency
+		-	Backup/Recovery
+		
+	Schema & Layers
+	
+	Server - provides services to clients
+	Client - receives services from servers
+	
+	Database - A collection of related data.
+	DBMS	-  A software that enables us to create and maintain
+			   database.
+	Data model - The concets used to design and store data in a
+				 database.
+	
+				 Hierarchical, Network, Relational
+				 
+	Relational Database - A collection of relations (table)
+				 
+	Characteristics of Database:
+		- A database has a "Universe of Discourse" or "miniworld".
+		  And changes in the miniworld are recorded in database.
+	
+		- A database should have some objectives.
+		
+		- A database should have pre-conceived users.
+		
+	
+	Monty Widenius
+
+	mysql
+		2010 - Oracle
+		
+	mariadb		
+	
+	SQL - Structured Query Language
+	
+	SEQUEL	-	Structured English Query Language
+	
+	IEEE
+	
+	Schema	-	Structure/Description of database
+	
+	SQL is verbose		-	DECLARE A AS INTEGER (pronunciable)
+	
+	C is concise		-	int a
+	
+	
+	
+	

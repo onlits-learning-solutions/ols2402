@@ -1,0 +1,51 @@
+
+	RDBMS	=	SQL
+	
+	SQL =	Structured Query Language
+	
+	Differentiate between human being and computer.
+	
+	Human being					Computer
+	
+	
+	Write short notes on SQL.
+	
+	SQL:
+		
+	
+	E-R Model
+		Book	(noun)
+		Member  (noun)
+		
+		Book_Issue (noun/verb)
+		
+	
+	Entity Type (Number of entities is not considered)
+	Entity Set
+		
+	C & DSA
+	
+	OOP
+	
+	SE
+	RDBMS
+	
+	coupling	-	Loose
+	cohesion	-	Tight
+	
+	Primary Key
+		Entity Integrity
+	Foreign Key
+		Referential Integrity
+		
+	Travelling Salesman Algorithm
+	
+	
+	Database
+	Table
+	User
+	View
+	Index
+	
+	
+	

@@ -17,9 +17,16 @@ typedef struct book
     float price;
 } BOOK;
 
+typedef struct node
+{
+    BOOK data;
+    struct node *next;
+} NODE;
+
 void bookmenu();
 void newbook();
-void getbooks();
+NODE *getbooks();
+void displaybooks();
 void getbook(int id);
 
 //---------------------- Member Module

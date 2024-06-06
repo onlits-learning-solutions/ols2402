@@ -1,0 +1,14 @@
+	Schema:
+		- Description of the database.
+		- Does not change frequently.
+		
+	Attributes
+		Simple			-	age, id
+		Composite		-	name(fname, mname, lname), address
+		Single-valued
+		Multi-valued
+	
+	Traditional Database:
+		Text & Numbers
+		
+	Assembly Language
