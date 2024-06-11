@@ -1,0 +1,64 @@
+	HTML	=	HyperText Markup Language
+	CSS		=	Cascading Style Sheet (Styling language)
+	JS		=	Scripting Language
+	
+	Root Element
+	Meta Information
+	
+	World Wide Web: Inforamtion System
+	Web Page: An electronic page which carry information
+	Web Site: A collection of web pages located at a particular
+			  location on the WWW.
+	Web Browser:
+	Web Server:
+	HTTP:	HyperText Transfer Protocol
+	HTTPS: S for Secure
+	
+	Responsive Web Page
+	Computer or Tablets or Mobile phone
+	
+	Publish an article in a Journal/Magazine
+	
+	HTML5
+	
+	<!DOCTYPE html>
+	<html>			----> Root Element
+		<head>
+			supporting elements
+		</head>
+		<body>
+			visible elements
+		</body>
+	</html>
+	
+	
+	SGML
+	HTML
+	
+	
+	CISC	-	Complex Instruction Set Computer
+	RISC	-	Reduced Instruction Set Computer
+	
+	
+	Addition for Subtraction
+	
+	2 X 3 = 6
+	2 + 2 + 2 = 6
+	
+	Website: a group of World Wide Web pages usually containing links to each other and made available online by an individual, company, or organization. (Merriam-Webster Dictionary)
+	
+	Onlits Schools (Website)
+		Homepage	-	index.html
+		AboutUs
+		Academics
+		Activities
+		Gallery
+	
+	
+	URI/URL: Univeral Resource Identifier/ Universal Resource Locator
+	
+	http://localhost:8000/
+	
+	
+	
+	
