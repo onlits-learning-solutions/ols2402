@@ -1,0 +1,47 @@
+/* universal selector */
+* {
+    margin: 0;
+}
+
+/* name selector */
+header {
+    background-color: dodgerblue;
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 15% auto;
+}
+
+/* class selector */
+.main {
+    padding: 10px;
+}
+
+/* id selector */
+#sidenav {
+    list-style: none;
+    padding: 0;
+}
+
+#sidenav li {
+    background-color: gray;
+    margin: 1px;
+    padding: 10px;
+}
+
+#sidenav li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    color: white;
+    background-color: black;
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+}
