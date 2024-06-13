@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Two Integers</title>
+    <script>
+        function add() {
+            let augend = Number(document.getElementById('augend').value);
+            let addend = Number(document.getElementById('addend').value);
+            let sum = augend + addend;
+            document.getElementById('sum').value = sum;
+            document.getElementById('sum-label').style.display = "block";
+            document.getElementById('sum').style.display = "block";
+        }
+    </script>
+
+    <style>
+        input {
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
+            padding: 5px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        button {
+            width: 70px;
+            padding: 5px;
+            border-radius: 20px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        .sum {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Sum of Two Integers</h1>
+    <form>
+        <label for="augend">Augend</label>
+        <input type="text" name="augend" id="augend">
+        <label for="addend">Addend</label>
+        <input type="text" name="addend" id="addend">
+        <label for="sum" class="sum" id="sum-label">Sum</label>
+        <input type="text" name="sum" id="sum" readonly class="sum">
+        <button type="button" onclick="add()">Add</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+
+</html>

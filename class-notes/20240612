@@ -1,0 +1,27 @@
+
+ #define SIZE 100
+
+ for(i=0; i<SIZE; i++)
+ {
+ 	//input
+ }
+ 
+ for(i=0; i<SIZE; i++)
+ {
+ 	//sorting
+ }
+ 
+ for(i=0; i<SIZE; i++)
+ {
+ 	//display
+ }
+ 
+ Frontend
+ 	HTML
+ 	CSS
+ 	JS
+ Backend
+ 	PHP
+ 	Mysql/Mariadb
+ 	
+ Frameworks

@@ -1,0 +1,65 @@
+ JavaScript
+ 
+ Z	-	Zed
+ Z	-	Zee
+ 
+ ZTV
+ 
+ Onlits	-	ONLy Infomation Technology Solutions
+ 
+ Only-its	-	Standardise
+ 
+ Linux	-	Lih-nux
+ Linus Torvals	-	Lih-nus
+ 
+ SQL
+ SEQueL
+ 
+ISO - C++
+ #include <iostream>
+ using namespace std;
+ int main(void)
+ {
+ 
+ 	return 0;
+ }
+ 
+ 
+Turbo C++ (1992)
+ #include <iostream.h>
+ void main()
+ {
+ 
+ }
+ 
+ Write a paragraph on 'Event Driven Programming' paradigm.
+ 
+ TypeScipt
+ 
+ 
+ object/entity
+ 
+ Object: Real life entities represented in a program
+ 	book
+ 	member
+ 	issue
+ 	return
+ 
+ Properties (Data)
+ Behaviour (Function)
+ 
+ 
+ Class:
+ 	The template (code) for creating object.
+ 	
+ 
+ int a;
+
+	here 'int' can be thought of a class
+	and 'a' as object. 
+ 
+ Class -> Recipe (ingredients + procedure)
+ Object -> dish (Samosa)
+ 
+ 
+ 
