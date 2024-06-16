@@ -1,0 +1,10 @@
+Types of user in LMS:
+	1. Admin	-	Most Powerful user
+	2. Librariran
+	3. Member
+	
+Data can be stored in a ordinary file or database file.
+
+	1. Efficient
+	2. Accurate
+	3. Robust
