@@ -1,0 +1,42 @@
+
+ Object: real or virtual
+ 
+ document - page
+ window	-	browser
+ 
+ Mozilla Firefox
+ 
+ separation of concern
+ 
+ Library
+ 	Front-End
+ 		HTML
+ 		CSS
+ 		JS
+ 	Back-End
+ 		PHP (C-based)
+ 		MariaDb
+ 		
+ 	A php file may contain html, css, js along with php.
+ 	
+ 	$_GET[]
+ 	$_POST[]
+ 	
+ 	Manipal Institute of Banking (ICICI Bank)
+ 	
+ 		10% knowledge
+ 		90% common sense
+ 		
+ 		90% knowlege
+ 		10% common sense
+ 		
+ 		Array has index.
+ 		nums[10]	->	nums[0], nums[1], ... , nums[9]
+ 		
+		Indexed Array
+ 		Associative Array
+ 
+ 	Start library project in php
+ 	
+ 		
+ 		
