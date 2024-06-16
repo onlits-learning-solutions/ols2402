@@ -13,7 +13,7 @@ if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "INSERT INTO user(email, password) VALUES('$email', ENCRYPT('$password'))";
+$sql = "INSERT INTO user(email, password) VALUES('$email', SHA1('$password'))";
 
 if (mysqli_query($connection, $sql))
     echo "User Created Successfully";

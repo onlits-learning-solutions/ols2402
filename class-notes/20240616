@@ -1,0 +1,36 @@
+ 
+ Refactoring
+ 
+ LMS modules:
+ 	1. Sign up
+ 	2. Sign in
+ 	3. Dashboard
+ 	4. Add a book to book database
+ 	5. Add a member to the system
+ 	6. Issue book to a member
+ 	7. Accept book return
+ 	8. Update an existing book's record
+	9. Update an existing member's record
+	-------------------------------------
+ 	
+ DCS	-	Daily Connection Summary
+ DBCS	-	Daily Bill Collection Summary
+ RCV	-	Recharge Coupon Voucher
+ CRBT	-	Caller Ring Back Tune
+ 
+ sir kisi v compiled language me string ke liye single quote kyu 
+ use nhi hota??
+ 
+ ''	-	char
+ "" -	char[]
+ 
+ '' or ""	-	string
+ 
+ echo 'The sum is $sum.';
+ The sum is $sum.
+ 
+ echo "The sum is $sum.";
+ The sum is 30.
+ 
+ 		***** Data transfer between pages *******
+ SQL Injection
