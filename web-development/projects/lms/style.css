@@ -2,6 +2,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    margin: 0px;
+}
+
 .col-2 {
     display: grid;
     grid-template-columns: auto auto;
@@ -19,4 +23,78 @@ button {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+}
+
+/* -------------------------- Header ---------------------------------*/
+header h1 {
+    padding-left: 30px;
+}
+
+#logo-text {
+    color:teal;
+}
+
+/* ------------------------ Navigation Bar --------------------------- */
+nav {
+    background-color: cornflowerblue;
+    height: 30px;
+    padding-top: 10px;
+}
+
+nav a {
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    background-color: gray;
+}
+
+nav a.active {
+    background-color: teal;
+}
+
+nav a.active:hover {
+    background-color: teal;
+    cursor: default;
+}
+
+#display-email {
+    float: right;
+    padding: 0px 15px;
+    text-decoration: none;
+    color: white;
+    cursor: default;
+}
+
+/* ----------------------------------- Main -------------------------- */
+main {
+    display: grid;
+    grid-template-columns: 15% auto;
+}
+
+/* ----------------------------- Main Aside -------------------------*/
+main aside {
+    margin-top: 10px;
+}
+main aside a {
+    padding: 10px 15px;
+    display: block;
+    color: teal;
+    text-decoration: none;
+}
+
+/* --------------------------- Footer ---------------------------- */
+footer {
+    background-color: cornflowerblue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+footer p {
+    margin: 0;
 }
