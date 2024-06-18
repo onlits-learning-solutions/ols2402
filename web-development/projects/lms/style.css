@@ -11,7 +11,9 @@ body {
     grid-template-columns: auto auto;
 }
 
-input {
+/*------------------------------- Sign In ----------------------------------------*/
+
+#sign-in input, #sign-up input {
     display: block;
     padding: 10px;
     border-radius: 5px;
@@ -19,7 +21,7 @@ input {
     margin-bottom: 20px;
 }
 
-button {
+#sign-in button, #sign-up button {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -97,4 +99,26 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* --------------------------------- Form - type1 ------------------------- */
+form.type-1 input, form.type-1 select {
+    padding: 5px;
+}
+
+form.type-1 button {
+    padding: 5px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    
+}
+
+.input-group label {
+    margin-right: 30px;
+}
+
+.command-group {
+    margin-bottom: 20px;
 }

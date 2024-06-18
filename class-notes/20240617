@@ -1,0 +1,34 @@
+
+	Layout
+		-
+		
+	M	-	Mongodb
+	E	-	Express.js	(server)	-	replace PHP
+	R	-	React.js	(client)	-	improve JS
+	N	-	Node.js		(Runtime)	-	independent
+	
+	W3C	-	World Wide Web Consortium
+	
+	Problem Statement
+	Project Proposal
+	
+	Standard output stream (monitor)
+	printf()
+	cout
+	out
+	
+	Standard input stream (keyboard)
+	scanf()
+	cin
+	in
+	
+	Online Judge
+		read output stream
+			if(true)
+				compare user result with actual result
+				if(true)
+					Give score and terminate
+				else
+					show the error and ask to redo (score deduct)
+			else	//received error output
+				show the error and ask to redo (score deduct)
