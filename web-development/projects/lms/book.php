@@ -10,7 +10,7 @@ if (isset($_SESSION['email']))
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LMS - Dashboard</title>
+    <title>LMS - Book</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,8 +19,8 @@ if (isset($_SESSION['email']))
         <h1 id="logo-text">Library Management System</h1>
     </header>
     <nav>
-        <a class="active">Dashboard</a>
-        <a href="book.php">Book</a>
+        <a href="dashboard.php">Dashboard</a>
+        <a class="active">Book</a>
         <a href="member.php">Member</a>
         <a href="transaction.php">Trasaction</a>
         <a href="report.php">Report</a>
@@ -28,11 +28,12 @@ if (isset($_SESSION['email']))
     </nav>
     <main>
         <aside>
-            <a href="">Item 1</a>
-            <a href="">Item 2</a>
+            <a href="book.php">Book Home</a>
+            <a href="add-book.php">Add Book</a>
+            <a href="">Edit Book</a>
         </aside>
         <div class="content">
-            <h3>Dashboard</h3>
+            <h3>Book Home</h3>
         </div>
     </main>
     <footer>
