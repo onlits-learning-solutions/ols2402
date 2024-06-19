@@ -122,3 +122,14 @@ form.type-1 button {
 .command-group {
     margin-bottom: 20px;
 }
+
+/*-------------------------- Table - table-1 -----------------------------*/
+table.table-1{
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 11pt;
+}
+
+table.table-1 tr {
+    /* border: 1px black solid; */
+}
