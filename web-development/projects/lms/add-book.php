@@ -30,7 +30,6 @@ if (isset($_SESSION['email']))
         <aside>
             <a href="book.php">Book Home</a>
             <a href="add-book.php">Add Book</a>
-            <a href="">Edit Book</a>
         </aside>
         <div class="content">
             <h3>Add Book</h3>
