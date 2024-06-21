@@ -48,7 +48,6 @@ if (mysqli_num_rows($result)) {
         <aside>
             <a href="book.php">Book Home</a>
             <a href="add-book.php">Add Book</a>
-            <a href="">Edit Book</a>
         </aside>
         <div class="content">
             <h3>Book Home</h3>
@@ -80,7 +79,8 @@ if (mysqli_num_rows($result)) {
                             <td><?= $book['isbn'] ?></td>
                             <td><?= $book['category'] ?></td>
                             <td><?= $book['price'] ?></td>
-                            <td><a href="view-book.php">view</a></td>
+                            <?php $uri = "view-book.php?id=" . $book['id'] ?>
+                            <td><a href="<?= $uri?>">view</a></td>
                         </tr>
                     <?php } ?>
                 </tbody>
