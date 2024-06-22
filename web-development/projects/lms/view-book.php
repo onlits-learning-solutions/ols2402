@@ -96,7 +96,7 @@ if (mysqli_num_rows($result)) {
                 <div class="command-group">
                     <button id="submit" style="display: none;">Submit</button>
                     <button type="button" id="edit">Edit</button>
-                    <button id="del">Delete</button>
+                    <button id="del" type="button">Delete</button>
                 </div>
             </form>
         </div>
@@ -109,10 +109,24 @@ if (mysqli_num_rows($result)) {
         let edit = document.getElementById('edit');
 
         edit.onclick = function() {
-            // document.getElementById('title').readOnly = false;
+            document.getElementById('title').readOnly = false;
+            document.getElementById('author').readOnly = false;
+            document.getElementById('edition').readOnly = false;
+            document.getElementById('publication').readOnly = false;
+            document.getElementById('pages').readOnly = false;
+            document.getElementById('isbn').readOnly = false;
+            document.getElementById('category').readOnly = false;
+            document.getElementById('price').readOnly = false;
             document.getElementById('submit').style.display = 'inline';
             document.getElementById('edit').style.display = 'none';
             document.getElementById('del').style.display = 'none';
+        }
+
+        let del = document.getElementById('del');
+        let id = document.getElementById('id').value;
+
+        del.onclick = function() {
+            window.location.href = 'book-delete.php?id=' + id;
         }
     </script>
 </body>
