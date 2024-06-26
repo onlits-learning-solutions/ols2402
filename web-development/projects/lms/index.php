@@ -1,3 +1,6 @@
+<?php
+$message = isset($_GET['status']) && ($_GET['status']) == 1 ? "Invalid email/password! Please retry..." : NULL;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,8 +17,7 @@
             <h1 style="text-align: center;">Library<br><br>Management<br><br>System</h1>
         </div>
         <div>
-            <div
-                style="margin: 20px; background-color:lightgray; padding: 50px;text-align: center; border-radius: 10px; height: 500px;">
+            <div style="margin: 20px; background-color:lightgray; padding: 50px;text-align: center; border-radius: 10px; height: 500px;">
                 <h1>Sign in</h1>
                 <form action="user-authentication.php" method="post" id="sign-in">
                     <label for="user-id">Email</label>
@@ -25,6 +27,7 @@
                     <button>Sign In</button>
                 </form>
                 <p>Don't have an account. <a href="sign-up.html">Sign up</a></p>
+                <p id="message" style="color: red;"><?= $message ?></p>
             </div>
         </div>
     </main>
