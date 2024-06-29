@@ -3,6 +3,8 @@ session_start();
 $email = null;
 if (isset($_SESSION['email']))
     $email = $_SESSION['email'];
+else
+    header('Location:index.php?status=3');
 
 define('SERVER', 'localhost');
 define('USER', 'ols2402');
@@ -42,7 +44,7 @@ if (mysqli_num_rows($result)) {
         <a href="member.php">Member</a>
         <a href="transaction.php">Trasaction</a>
         <a href="report.php">Report</a>
-        <span id="display-email"><?= $email ?></span>
+        <span id="display-email"><?= $email ?><a href="logout.php">logout</a></span>
     </nav>
     <main>
         <aside>
@@ -80,7 +82,7 @@ if (mysqli_num_rows($result)) {
                             <td><?= $book['category'] ?></td>
                             <td><?= $book['price'] ?></td>
                             <?php $uri = "view-book.php?id=" . $book['id'] ?>
-                            <td><a href="<?= $uri?>">view</a></td>
+                            <td><a href="<?= $uri ?>">view</a></td>
                         </tr>
                     <?php } ?>
                 </tbody>
