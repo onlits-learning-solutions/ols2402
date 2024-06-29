@@ -3,6 +3,9 @@ session_start();
 $email = null;
 if (isset($_SESSION['email']))
     $email = $_SESSION['email'];
+else
+    header('Location:index.php?status=3');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +27,7 @@ if (isset($_SESSION['email']))
         <a href="member.php">Member</a>
         <a href="transaction.php">Trasaction</a>
         <a href="report.php">Report</a>
-        <span id="display-email"><?= $email ?></span>
+        <span id="display-email"><?= $email ?><a href="logout.php">logout</a></span>
     </nav>
     <main>
         <aside>

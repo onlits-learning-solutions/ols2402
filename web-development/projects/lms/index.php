@@ -1,5 +1,14 @@
 <?php
-$message = isset($_GET['status']) && ($_GET['status']) == 1 ? "Invalid email/password! Please retry..." : NULL;
+
+if (isset($_GET['status']) && ($_GET['status']) == 1)
+    $message = "Invalid email/password! Please retry...";
+elseif (isset($_GET['status']) && ($_GET['status']) == 2)
+    $message = "You have successfully logged out!";
+elseif (isset($_GET['status']) && ($_GET['status']) == 3)
+    $message = "Session invalid. Please login again!";
+else
+    $message = NULL;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
