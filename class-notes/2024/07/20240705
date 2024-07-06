@@ -1,0 +1,46 @@
+
+	2d array
+	
+	Array is a collection of similar elements.
+	
+	Array is a data structure.
+	
+	Data structure is an organisation of data to process and store
+	them efficiently.
+	
+	3! = 6
+	4! = 24
+	5! = 120
+	6! = 720
+	
+	Matix
+	
+	10	20	30
+	40	50	60
+	70	80	90
+	
+	Logical
+	Physical
+	
+	WAP to accept elements of a 3 x 3 matrix and display it in the
+	matrix form.
+	
+	WAP to accept names of 5 objects used in daily life and display
+	them.
+	
+	char object[5][50];
+	
+	Dynamic array
+	
+	WAP in C to add two matrices.
+	WAP in C to multiply two matrices.
+	
+	800  X 600			-	480000
+	1024 X 768			-	786432
+	1366 X 768			-	1049088
+	1920 X 1080	(HD)	-	2073600
+	
+	Associative Model
+	
+	
+	

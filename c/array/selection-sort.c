@@ -15,7 +15,7 @@ int main(void)                          //O(n^2)
     {
         for (int j = i + 1; j < SIZE; j++)              // O(n) x O(n)  =   O(n^2)
         {           
-            if (nums[j] < nums[i])
+            if (nums[j] > nums[i])
             {
                 int t = nums[j];
                 nums[j] = nums[i];
