@@ -1,0 +1,72 @@
+
+	Sorting: Arrange elements in an order.
+	
+	Domain - Area
+	
+	Algorithmic efficiency
+	
+	Asymtotic Notation
+		Big Omega	-	Lower Bound
+		Big Theta	-	Actual Bound
+		----------------------------
+		Big O	-		Upper Bound
+		
+		
+	Best Case
+	Average Case
+	Worst Case
+	
+	4560	-	4000	-	Omega
+	4560	-	4560	-	Exact
+	4560	-	5000	-	Big O
+	
+	O(1)		-	Constant Complexity
+	O(log n)	-	Logarithmic	
+	O(n)		-	Linear Complexity
+	
+	
+	O(n)
+	
+	n^p	-	O(n)
+	
+	2^3 = 8	//exponentiation
+	log 2(8) = 3 
+	log2 (16) = 6
+	
+	78
+	99
+	5
+	63
+	2
+	
+	key = 78 (Best Case)
+	key = 19 (Worst Case)
+	
+	O(n-1)	=	O(n)
+	O(n-2)	=	O(n)
+	O(n-3)	=	O(n)
+	O(n-4)	=	O(n)
+	
+	55	44	44	44	
+	44	55	33	33
+	33	33	55	22
+	22	22	22	55
+	11	11	11	11
+	
+	44	33	33	 
+	33	44	22
+	22	22	44
+	11	11	11
+	55	55	55
+	
+	33	22	
+	22	33
+	11	11
+	44	44
+	55	55
+	
+	22	11
+	11	22
+	33	33
+	44	44
+	55	55
