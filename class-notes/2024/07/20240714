@@ -1,0 +1,141 @@
+
+	int *p;
+	int *p[10];
+	int(*p)[10]
+	
+		0 or 1		0 or 1				0 or 1
+	if(year%4==0 && year%100!=0 || year%400==0)
+	
+	From HLL to Native language	-	Compiler
+	Computer works using instruction - execution
+	
+	Syntax error -	Grammatical error
+	obj file	-	object file
+	
+	Why the value of pi is 22/7?
+	
+	Circumference / diameter
+	
+	Paradigms
+	
+	Job		-	MAANG
+	Start your own company
+	
+	Google IO
+	
+	main()
+	{
+	
+	
+	}
+	
+	warning: 'main' should return a value
+	
+	int, short, long, char, float, double, long double, void
+	
+	
+	<condition> ? <expresstion_if_true> : <express_if_false>
+	
+	if(<condition>)
+	{
+		<expression_if_true>;
+		.
+		.
+		.
+		
+	}
+	else
+	{
+		<expression_if_false:
+		.
+		.
+		.
+	}
+	
+	
+	switch (<switch_variable>)
+	{
+		case <c1>:
+			<expresstion>
+			.
+			.
+			.
+			break;
+		case <c2>:
+			<expresstion>
+			.
+			.
+			.
+			break;
+		.
+		.
+		.			
+		case <cn>:
+			<expresstion>
+			.
+			.
+			.
+			break;
+		default:
+			<expresstion>
+			.
+			.
+			.
+			break;
+	}
+	
+	The actual object code for the library functions are stored in
+	some archive (.a) files that are normally not human readable.
+	We know that it is important to provide prototypes for the function
+	in C. So, the prototypes must be stored in some human readable file.
+	The header files server this purpose. They store as well as organise
+	the function prototypes for various library function. We may create
+	header files for our own functions, if needed.
+	
+	stdio.h
+		Declares prototypes for the standard input/output function
+		printf, scanf, getchar, putchar
+	math.h
+		sqrt, pow, abs, ... 
+	string.h
+		strlen, strcpy, strcmp, ...
+	stdlib.h
+		malloc, calloc, relloc, free, exit
+	
+	
+	Library function
+		Standard library
+		Custom library
+	User defined
+	
+	WAP to accept an amount in figures and display it in words.
+	
+	Errors & Ommisions Expected
+	
+	Modularisation & Reusability
+	
+	printf("The sum is %d.\n", sum(10, 20));
+	printf("The sum is %d.\n", sum(x, y));
+	
+	int sum(int a, int b)
+	
+	
+	printf("The sum is %d.\n", sum(&x, &y));
+	
+	int sum (int *a, int *b)
+	
+	#define is a pre-processor directive which does the job of
+	'macro substitution'.
+	
+	macro is a code in c that resembles a function
+	
+	using function
+	
+	toupper()
+	
+	ascii code
+	
+	a = 97		A=65
+	b = 98		B=66
+	
+	
