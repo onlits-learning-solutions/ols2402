@@ -1,0 +1,75 @@
+
+ O	-	Object
+ O	-	Oriented
+ P	-	Programming
+ 
+ C++	-	Multi-paradigm language (POP, OOP)
+ Python
+ PHP
+ 
+ Java	-	OOP Languages
+ C#
+ 
+ 
+ Modularisation
+ 
+ Function/procedure/routine
+ 
+ SQL	-	Declarative paradigm
+ PL/SQL	-	Procedural Language/SQL
+ 			Stored Procedure & Function
+ 			
+ int main(void)
+ {
+ 	int n;
+ 	if(countFactors(n) == 2)
+ 		printf("Prime");
+ 	else
+ 		printf("Not prime");
+ 	
+ }
+ 
+ int countFactors(int n)
+ {
+ 
+ }
+ 
+ Production-grade program
+ 
+ Plug & Play
+ 
+ Hulk
+ Bruce Banner	-	7 PhD
+ 
+ IronMan
+ Tony Stark (core reactor)
+ Howard Stark
+ 
+ 
+ int a;
+ 
+ student s;	//user defined data type
+ date dob, cd;
+ age = cd - dob;	//X
+ 
+ age = calculateAge(cd, dob);
+ 
+ Mobile	=	Components + Operations
+ Bicylcle = Components + Operations
+ 
+ double sqrt(double)
+ float sqrtf(float)
+ 
+ class	-	a user-defined datatype like structure in c
+ object	-	variable of class type like structure variable in c
+ 
+ Object Oriented Programming in C++
+ 	E. Balagurusamy
+ 
+ Compare C & C++ book exercises and comment on them.
+ 
+ 
+ 
+ 
+ 
+ 
