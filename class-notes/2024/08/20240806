@@ -1,0 +1,55 @@
+
+ Type (Data type)
+ 
+ Encapsulation
+ Abstraction
+ Inheritance
+ Polymorphism
+ 
+ Dynamic binding
+ Message passing
+ 
+ Encapsulation: The wrapping up of data and function(method) into a
+                single unit (called class).
+                
+                
+ Object has properties (data) and behavior (methods)
+ 
+ Ojects are the basic runtime entities in an object oriented system.
+ They may represent a person, place, a bank account etc.
+ 
+ Object are variable of class type.
+ 
+ Object are value-types.
+ 
+ Types of variables:
+ 	Value type			:	Stores actual data (int, float, char)
+ 	Reference type		:   Stores addresses (pointer)
+ 	
+ Variables can be created either statically or dynamically.
+ Statically:
+ 	int a;
+ 	float b;
+ 	int nums[10];
+ 
+ Dynamically:
+ 	int *a = (int*)malloc(sizeof(int));			//C
+ 	int *nums = (int*)calloc(n, sizeof(int));	//C
+ 	
+ 	FILE *fp;									//C
+ 
+ 	int *a = new int;							//C++
+ 	Integer a = new Integer();					//Java
+ 	
+ Routine is a collection of periods.
+ 
+ ::	-> Scope resolution operator
+ 	
+ Access specifier/modifier
+ 	private
+ 	protected (inheritance)
+ 	public
+ 	-------
+ 	default	(Java) - No keyword for this
+ 	
+ 	
