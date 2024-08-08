@@ -4,48 +4,67 @@ using namespace std;
 
 class period
 {
-    int id;                 //instance variable
+    int id; // instance variable
     string day;
     string time;
     string subject;
     string teacher;
 
-    void setPeriod(int id, string day, string time, string subject, string teacher)
-    {
-        this->id = id;
-        this->day = day;
-        this->time = time;
-    }
-
-    void setId(int id)      //setter method
-    {
-        this->id = id;
-    }
-
-    int getId()             //getter method
-    {
-        return id;
-    }
-
-    void setDay(string day)
-    {
-        day = day;
-    }
+public:
+    period(int id, string day, string time, string subject, string teacher);
+    void setId(int id);
+    int getId();
+    void setDay(string day);
 };
+
+period::period(int id, string day, string time, string subject, string teacher)
+{
+    this->id = id;
+    this->day = day;
+    this->time = time;
+    this->subject = subject;
+    this->teacher = teacher;
+}
+
+void period::setId(int id) // setter method
+{
+    this->id = id;
+}
+
+int period::getId() // getter method
+{
+    return id;
+}
+
+void period::setDay(string day)
+{
+    day = day;
+}
 
 class routine
 {
-    period periods; // periods is an object (static allocation)
-    // period *periods = new period(); //here periods is not an object but it is pointer to object. (dynamic allocation)
+    period period1 = period(1, "Monday", "9:00-10:00", "Hindi", "RKS"); // explicit call to constructor
+    // period period2;
+    // period period3;
 
+public:
     void setRoutine()
     {
-        
+        // period1.setPeriod(1, "Monday", "9:00-10:00", "Hindi", "RKS");
+        // period2.setPeriod(2, "Monday", "10:00-11:00", "English", "KD");
+        // period3.setPeriod(3, "Monday", "11:00-12:00", "Mathematics", "SS");
+    }
+
+    void displayRoutine()
+    {
+        cout << "id: " << period1.getId() << endl; // here endl is manipulator
     }
 };
 
 int main(void)
 {
-
+    routine routine10;
+    routine10.setRoutine();
+    routine10.displayRoutine();
     return 0;
 }
