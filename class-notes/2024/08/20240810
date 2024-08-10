@@ -1,0 +1,15 @@
+	
+	routine()
+	{
+
+	}
+	
+	C/C++	-	char	-	8-bit (ASCII)
+	Java	-	char	-	16-bit (UTF-16)
+			-	byte	-	8-bit (ASCII)
+			
+	IS-A	-	Courses (btech, mba)
+	HAS-A	-	Teacher (Class)
+	PART-OF -	Teacher (Qualification, Skill)
+	
+	

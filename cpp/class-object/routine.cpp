@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class period
+struct period
 {
     int id; // instance variable
     string day;
@@ -11,6 +11,7 @@ class period
     string teacher;
 
 public:
+    period() {}
     period(int id, string day, string time, string subject, string teacher);
     void setId(int id);
     int getId();
@@ -43,11 +44,10 @@ void period::setDay(string day)
 
 class routine
 {
-    period period1 = period(1, "Monday", "9:00-10:00", "Hindi", "RKS"); // explicit call to constructor
-    // period period2;
-    // period period3;
+    period periods[48];
 
 public:
+
     void setRoutine()
     {
         // period1.setPeriod(1, "Monday", "9:00-10:00", "Hindi", "RKS");
@@ -57,7 +57,7 @@ public:
 
     void displayRoutine()
     {
-        cout << "id: " << period1.getId() << endl; // here endl is manipulator
+        cout << "id: " << periods[0].getId() << endl; // here endl is manipulator
     }
 };
 
