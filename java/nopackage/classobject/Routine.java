@@ -5,6 +5,9 @@ class Period {
     private String subject;
     private String teacher;
 
+    Period() { // no-argument constructor
+    }
+
     Period(int id, String day, String time, String subject, String teacher) {
         this.id = id;
         this.day = day;
@@ -29,13 +32,15 @@ class Period {
 }
 
 public class Routine {
-    Period period1 = new Period(1, "Monday", "9:00-10:00", "Hindi", "RKS"); //explicit call to constructor
+    Period period1 = new Period(1, "Monday", "9:00-10:00", "Hindi", "RKS"); // explicit call to constructor
+    Period period2 = new Period();
 
     void setRoutine() {
         // period1.setPeriod(1, "Monday", "9:00-10:00", "Hindi", "RKS");
     }
 
     public static void main(String[] args) {
-
+        Routine routine = new Routine();
+        System.out.println(routine);
     }
 }
