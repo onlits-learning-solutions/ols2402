@@ -92,68 +92,65 @@ int period ::idCount;
 
 class routine
 {
-    string days[7] = {"Monday", "Tuesday", "Wednesday"};
+    string days[6] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+    string slots[SLOTS] = {"9:00-10:00", "10:00-11:00", "11:00-12:00", "12:00-1:00", "1:00-2:00", "2:00-3:00", "3:00-4:00", "4:00-5:00"};
     period periods[SIZE];
 
 public:
-    void setRoutine()
+    void setPeriod(int id, string subject, string teacher);
+    void getRoutine();
+};
+
+void routine::setPeriod(int id, string subject, string teacher)
+{
+    periods[id].setSubject(subject);
+    periods[id].setTeacher(teacher);
+}
+
+void routine::getRoutine()
+{
+    cout << "---------------------------------------------------------------------------------------------------------------------------" << endl;
+    cout << "\t";
+    for (int i = 0; i < SLOTS; i++)
     {
-        periods[0].setDay("Monday");
-        periods[0].setTime("9:00 - 10:00");
-        periods[0].setSubject("HIN");
-        periods[0].setTeacher("SD");
-
-        periods[1].setDay("Monday");
-        periods[1].setTime("10:00 - 11:00");
-        periods[1].setSubject("ENG");
-        periods[1].setTeacher("RKS");
-
-        periods[2].setDay("Monday");
-        periods[2].setTime("11:00 - 12:00");
-        periods[2].setSubject("MATH");
-        periods[2].setTeacher("MS");
-
-        periods[8].setDay("Tuesday");
-        periods[8].setTime("9:00 - 10:00");
-        periods[8].setSubject("HIN");
-        periods[8].setTeacher("SD");
-
-        periods[16].setDay("Tuesday");
-        periods[16].setTime("9:00 - 10:00");
-        periods[16].setSubject("HIN");
-        periods[16].setTeacher("SD");
+        cout << setw(15) << slots[i];
     }
+    cout << endl;
+    cout << "---------------------------------------------------------------------------------------------------------------------------" << endl;
 
-    void displayRoutine()
+    cout << days[0];
+    for (int i = 0, j = 1; i < SIZE; i++)
     {
-        cout << "---------------------------------------------------------------------------------------------------------------------------" << endl;
-        cout  << "\t";
-        for (int i = 0; i < SLOTS; i++)
+        cout << setw(10) << periods[i].getSubject() << "(" << periods[i].getTeacher() << ")";
+        if ((i + 1) % SLOTS == 0)
         {
-            cout << setw(15) << periods[i].getTime();
-        }
-        cout << endl;
-        cout << "---------------------------------------------------------------------------------------------------------------------------" << endl;
-
-        cout << "Monday";
-        for (int i = 0; i < SIZE; i++)
-        {
-            cout << setw(10) << periods[i].getSubject() << "(" << periods[i].getTeacher() << ")";
-            if ((i + 1) % SLOTS == 0)
+            cout << endl
+                 << endl;
+            if (j <= 5)
             {
-                cout << endl
-                     << endl;
-                     cout << periods[8].getDay();
+                cout << days[j];
+                j++;
             }
         }
-        cout << "---------------------------------------------------------------------------------------------------------------------------" << endl;
     }
-};
+    cout << "---------------------------------------------------------------------------------------------------------------------------" << endl;
+}
 
 int main(void)
 {
-    routine r;
-    r.setRoutine();
-    r.displayRoutine();
+    routine I, II, III;
+    I.setPeriod(0, "Hindi", "GD");
+    I.setPeriod(1, "English", "RKS");
+    I.setPeriod(8, "Hindi", "GD");
+    I.setPeriod(9, "English", "RKS");
+    I.setPeriod(16, "Hindi", "GD");
+    I.setPeriod(17, "English", "RKS");
+    I.setPeriod(24, "Hindi", "GD");
+    I.setPeriod(25, "English", "RKS");
+    I.setPeriod(32, "Hindi", "GD");
+    I.setPeriod(33, "English", "RKS");
+    I.setPeriod(40, "Hindi", "GD");
+    I.setPeriod(41, "English", "RKS");
+    I.getRoutine();
     return 0;
 }
