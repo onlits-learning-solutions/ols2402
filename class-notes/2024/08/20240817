@@ -1,0 +1,54 @@
+
+	Data			-	field/attribute	-	variables
+	Interraction	-	behaviour		-	function/method
+	
+	class: InvoiceParticulars
+	Fields
+		- quantity
+		- description
+		- unitPrice
+		- Amount
+	Methods:
+		InvoiceParticulars()
+		setQuantity()
+		getQuantity()
+		setDescription()
+		getDescription()
+		setUnitPrice()
+		getUnitPrice()
+		setAmount()
+		getAmount()
+		
+	class: Invoice
+	Fields
+		- sellerName
+		- sellerAddress
+		- billToName
+		- billToAddress
+		- shipToName
+		- shipToAddress
+		- invoiceNo
+		- invoiceDate
+		- invoiceParticulars[]
+		- subtotal
+		- tax
+		- total
+		- termsAndConditions[]
+	Methods:
+	
+	
+	POJO	=	Plain Old Java Objects
+	POPO	=	Plain Old PHP Objects
+	POCO	=	Plain Old CLR Objects
+	
+	
+	class Priyanka extends CSEStudents {
+	
+	}
+	
+	Abstraction
+	Implementation
+	
+	inner class
+	
+	
