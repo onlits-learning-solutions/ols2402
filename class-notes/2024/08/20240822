@@ -1,0 +1,45 @@
+
+	Abstraction
+		Abstract class - C++ & Java
+		Interface - Java
+		
+	
+	
+	Difference between abstract class and interface.
+	
+	Inheritance -	One class (object) derives the features of
+					another class (object)
+					
+					Single Inheritance
+					Multiple Inheritance (Diamond Problem)
+					Multi-level
+					Hierarchical
+					Hybrid
+					
+	Contract between classes
+	
+	Conventions in Java:
+		keywords	-	lowercase
+		constants	-	UPPER_CASE
+		package		-	lowercase
+		class/interface	-	PascalCase
+		methods/fields	-	camelCase
+		
+		kebab-case	-	background-color
+		snake_case	-	user_name
+		
+		mysqli_connect()
+		
+		import java.sql.DriverManager;
+		
+		public static void main(String[] args) {
+			System.out.println()
+			DriverManager.getConnection()
+		}
+		
+		package com.onlits.sql;
+		
+		package ols2402.classobject;
+		
+		Fully qualified class name
+		
