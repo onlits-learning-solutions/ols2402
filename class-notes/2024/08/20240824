@@ -1,0 +1,8 @@
+
+	Parallel programming
+	
+	JRE	=	Java Runtime Environment (JVM + Class Library)
+	
+	In c static variable were shared between function calls.
+	
+	InvoiceMain.main();
