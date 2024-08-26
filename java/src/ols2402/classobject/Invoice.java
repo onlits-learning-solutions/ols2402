@@ -52,6 +52,10 @@ public class Invoice {
         this.customerAddress = customerAddress;
     }
 
+    public void setInvoiceParticulars(InvoiceParticulars[] invoiceParticulars) {
+        this.invoiceParticulars = invoiceParticulars;
+    }
+
     public void getInvoice() {
         System.out.println("INVOICE");
         System.out.println("-------------------------------------------------");
@@ -65,7 +69,11 @@ public class Invoice {
         System.out.println("Customer Name: " + customerName);
         System.out.println("Customer Address: " + customerAddress);
         System.out.println("-------------------------------------------------");
-        System.out.println("Space for invoice particulars");
+        System.out.println("Description\tQuantity\tUnit Price\tAmount");
+        System.out.println("-------------------------------------------------");
+        for(InvoiceParticulars invoiceParticular : invoiceParticulars) {
+            System.out.println(invoiceParticular.description);
+        }
         System.out.println("-------------------------------------------------");
         System.out.println("Thankyou!");
         System.out.println("Visit Again...");
@@ -73,9 +81,17 @@ public class Invoice {
 
     class InvoiceParticulars {
         private int id; // instance variable
-        private int quantity;
         private String description;
+        private int quantity;
         private float unitPrice;
         private float amount;
+
+        public void setInvoiceParticular(int id, String description, int quantity, float unitPrice) {
+            this.id = id;
+            this.description = description;
+            this.quantity = quantity;
+            this.unitPrice = unitPrice;
+            this.amount = quantity * unitPrice;            
+        }
     }
 }
