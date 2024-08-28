@@ -1,9 +1,7 @@
 package ols2402.classobject;
 
-import java.applet.Applet;
 import java.util.Date;
 
-import ols2402.classobject.Invoice.InvoiceParticulars;
 
 public class Priyanka {
     public static void main(String[] args) {
@@ -16,9 +14,9 @@ public class Priyanka {
         anisha.setCustomerName("Anisha Kumari");
         anisha.setCustomerAddress("Chapra, Bihar");
 
-        Invoice.InvoiceParticulars[] invoiceParticulars = new Invoice.InvoiceParticulars[1];
-        invoiceParticulars[0].setInvoiceParticular(1, "Britania Mariegold", 2, 45);
-        // anisha.setInvoiceParticulars(invoiceParticulars);
+        InvoiceParticulars invoiceParticulars = new InvoiceParticulars(1, "Britania Mariegold", 2, 45);
+
+        anisha.setInvoiceParticulars(invoiceParticulars);
 
         anisha.getInvoice();
     }

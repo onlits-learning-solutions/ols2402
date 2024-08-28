@@ -1,5 +1,6 @@
 package ols2402.classobject;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Invoice {
@@ -10,7 +11,7 @@ public class Invoice {
     private String sellerAddress;
     private String customerName;
     private String customerAddress;
-    private InvoiceParticulars[] invoiceParticulars;
+    private ArrayList<InvoiceParticulars> invoiceParticulars;
 
     public void setInvoiceNo(int invoiceNo) {
         this.invoiceNo = invoiceNo;
@@ -41,7 +42,7 @@ public class Invoice {
     }
 
     public void setSellerAddress(String sellerAddress) {
-        this.sellerAddress  = sellerAddress;
+        this.sellerAddress = sellerAddress;
     }
 
     public void setCustomerName(String customerName) {
@@ -52,8 +53,8 @@ public class Invoice {
         this.customerAddress = customerAddress;
     }
 
-    public void setInvoiceParticulars(InvoiceParticulars[] invoiceParticulars) {
-        this.invoiceParticulars = invoiceParticulars;
+    public void setInvoiceParticulars(InvoiceParticulars invoiceParticulars) {
+        this.invoiceParticulars.add(invoiceParticulars);
     }
 
     public void getInvoice() {
@@ -71,27 +72,35 @@ public class Invoice {
         System.out.println("-------------------------------------------------");
         System.out.println("Description\tQuantity\tUnit Price\tAmount");
         System.out.println("-------------------------------------------------");
-        for(InvoiceParticulars invoiceParticular : invoiceParticulars) {
-            System.out.println(invoiceParticular.description);
+        for (InvoiceParticulars invoiceParticular : invoiceParticulars) {
+            if (invoiceParticular.getDescription() != null)
+                System.out.println(invoiceParticular.getDescription());
         }
         System.out.println("-------------------------------------------------");
         System.out.println("Thankyou!");
         System.out.println("Visit Again...");
     }
+}
 
-    class InvoiceParticulars {
-        private int id; // instance variable
-        private String description;
-        private int quantity;
-        private float unitPrice;
-        private float amount;
+class InvoiceParticulars {
+    private int id; // instance variable
+    private String description;
+    private int quantity;
+    private float unitPrice;
+    private float amount;
 
-        public void setInvoiceParticular(int id, String description, int quantity, float unitPrice) {
-            this.id = id;
-            this.description = description;
-            this.quantity = quantity;
-            this.unitPrice = unitPrice;
-            this.amount = quantity * unitPrice;            
-        }
+    public InvoiceParticulars() {
+    }
+
+    public InvoiceParticulars(int id, String description, int quantity, float unitPrice) {
+        this.id = id;
+        this.description = description;
+        this.quantity = quantity;
+        this.unitPrice = unitPrice;
+        this.amount = quantity * unitPrice;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }
