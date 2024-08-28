@@ -53,8 +53,8 @@ public class Invoice {
         this.customerAddress = customerAddress;
     }
 
-    public void setInvoiceParticulars(InvoiceParticulars invoiceParticulars) {
-        this.invoiceParticulars.add(invoiceParticulars);
+    public void setInvoiceParticulars(ArrayList<InvoiceParticulars> invoiceParticulars) {
+        this.invoiceParticulars = invoiceParticulars;
     }
 
     public void getInvoice() {

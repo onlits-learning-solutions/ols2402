@@ -1,6 +1,7 @@
 package ols2402.classobject;
 
 import java.util.Date;
+import java.util.ArrayList;
 
 
 public class Priyanka {
@@ -14,8 +15,9 @@ public class Priyanka {
         anisha.setCustomerName("Anisha Kumari");
         anisha.setCustomerAddress("Chapra, Bihar");
 
-        InvoiceParticulars invoiceParticulars = new InvoiceParticulars(1, "Britania Mariegold", 2, 45);
-
+        ArrayList<InvoiceParticulars> invoiceParticulars = new ArrayList<InvoiceParticulars>();
+        invoiceParticulars.add(new InvoiceParticulars(1, "Britania Mariegold", 2, 45));
+        invoiceParticulars.add(new InvoiceParticulars(2, "Britania Gooday", 5, 35));
         anisha.setInvoiceParticulars(invoiceParticulars);
 
         anisha.getInvoice();
