@@ -1,12 +1,12 @@
 package ols2402.classobject;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Invoice {
     private int invoiceNo;
-    private Date invoiceDate;
-    private Date invoiceDueDate;
+    private LocalDate invoiceDate;
+    private LocalDate invoiceDueDate;
     private String sellerName;
     private String sellerAddress;
     private String customerName;
@@ -21,19 +21,19 @@ public class Invoice {
         return invoiceNo;
     }
 
-    public void setInvoiceDate(Date invoiceDate) {
+    public void setInvoiceDate(LocalDate invoiceDate) {
         this.invoiceDate = invoiceDate;
     }
 
-    public Date getInvoiceDate() {
+    public LocalDate getInvoiceDate() {
         return invoiceDate;
     }
 
-    public void setInvoiceDueDate(Date invoiceDueDate) {
+    public void setInvoiceDueDate(LocalDate invoiceDueDate) {
         this.invoiceDueDate = invoiceDueDate;
     }
 
-    public Date getInvoiceDueDate() {
+    public LocalDate getInvoiceDueDate() {
         return invoiceDueDate;
     }
 
@@ -57,26 +57,38 @@ public class Invoice {
         this.invoiceParticulars = invoiceParticulars;
     }
 
+    void printLine(int n) {
+        for (int i = 1; i <= n; i++)
+            System.out.print("-");
+
+        System.out.println();
+    }
+
     public void getInvoice() {
+        final int LINE_SIZE = 60;
         System.out.println("INVOICE");
-        System.out.println("-------------------------------------------------");
+        printLine(LINE_SIZE);
         System.out.println("Seller Name: " + sellerName);
         System.out.println("Seller Address: " + sellerAddress);
-        System.out.println("-------------------------------------------------");
+        printLine(LINE_SIZE);
         System.out.println("Invoice No: " + invoiceNo);
         System.out.println("Invoice Date: " + invoiceDate);
         System.out.println("Invoice Due Date: " + invoiceDueDate);
-        System.out.println("-------------------------------------------------");
+        printLine(LINE_SIZE);
         System.out.println("Customer Name: " + customerName);
         System.out.println("Customer Address: " + customerAddress);
-        System.out.println("-------------------------------------------------");
-        System.out.println("Description\tQuantity\tUnit Price\tAmount");
-        System.out.println("-------------------------------------------------");
+        printLine(LINE_SIZE);
+        System.out.printf("%-25s%-10s%-15s%-10s\n", "Description", "Quantity", "Unit Price", "Amount");
+        printLine(LINE_SIZE);
         for (InvoiceParticulars invoiceParticular : invoiceParticulars) {
-            if (invoiceParticular.getDescription() != null)
-                System.out.println(invoiceParticular.getDescription());
+            if (invoiceParticular.getDescription() != null) {
+                System.out.printf("%-25s%-10d%15.2f%10.2f", invoiceParticular.getDescription(),
+                        invoiceParticular.getQuantity(), invoiceParticular.getUnitPrice(),
+                        invoiceParticular.getAmount());
+            }
+            System.out.println();
         }
-        System.out.println("-------------------------------------------------");
+        printLine(LINE_SIZE);
         System.out.println("Thankyou!");
         System.out.println("Visit Again...");
     }
@@ -100,7 +112,23 @@ class InvoiceParticulars {
         this.amount = quantity * unitPrice;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public String getDescription() {
         return description;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public float getUnitPrice() {
+        return unitPrice;
+    }
+
+    public float getAmount() {
+        return amount;
     }
 }
