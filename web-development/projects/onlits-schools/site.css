@@ -22,20 +22,24 @@ main {
 }
 
 /* id selector */
-#sidenav {
-    list-style: none;
-    padding: 0;
-}
-
-#sidenav li {
+aside {
     background-color: gray;
-    margin: 1px;
-    padding: 10px;
 }
 
-#sidenav li a {
+aside a {
+    display: block;
     text-decoration: none;
     color: white;
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+aside a:hover {
+    background-color: black;
+}
+
+.active {
+    background-color: green;
 }
 
 footer {

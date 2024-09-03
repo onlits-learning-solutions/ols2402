@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-image: url('images/cleancode.png');
+    background-size: 800px 600px;
+}
+
+header {
+    background-color: blueviolet;
+    padding: 10px;
+    color: white;
+}
+
+nav {
+    background-color: black;
+    margin-bottom: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+nav a:hover {
+    background-color: green;
+}
+
+h1.type-1 {
+    color: red;
+}
