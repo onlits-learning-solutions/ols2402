@@ -10,7 +10,7 @@ int main(void)
     {
         i++;
         mid = (low + high) / 2;
-        cout << low << endl;
+
         if (key == arr[mid])
         {
             cout << key << " found at index " << mid << endl;
@@ -18,7 +18,7 @@ int main(void)
             return 0;
         }
 
-        if (key < mid)
+        if (key < arr[mid])
         {
             high = mid - 1;
         }
