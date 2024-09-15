@@ -1,0 +1,23 @@
+
+	Apple
+	Samsung
+	
+	Hierarchical
+	RDBMS	-	DML, DDL, 
+	
+	Future scope & Further Enhancement
+	
+	OPAC
+	
+	for(int i=0; i<invoiceParticulars.length(); i++)
+	
+	int[] numbers = int[10];
+	
+	for(int i=0; i<number.length(); i++) {
+		System.out.println(numbers[i]);
+	}
+
+	for(int number : numbers) {
+		System.out.println(number);
+	}
+	

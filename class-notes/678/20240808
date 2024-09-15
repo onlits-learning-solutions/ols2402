@@ -1,0 +1,44 @@
+
+	Constructor: is a special member function/method whose task is to
+	             initialize the objects of a class. The function is
+	             special because its name and that of the class is
+	             same.
+	             
+	             1. Constructors are always defined in the public
+	                section.
+	             2. Constructors does not anything not even void.
+	             3. Constructors are automatically called when an
+	                object of the class is created.
+	                
+	If an explicit constructor is not defined the compiler supplies a
+	default constructor implicitly, which is of the form:
+		period::period()
+		{
+		}
+	
+	And if a constructor is explictly defined compiler will not supply
+	the default constructor.
+	
+	Parameterized constructor.
+	
+	int a = 10;
+	
+	int nums[] = {10, 20, 30};
+	
+	period period1 = period(1, "Monday", "9:00-10:00", "Hindi", "RKS");
+	
+	::	->	Scope resolution operator
+	
+	Bitwise operator
+	<< (left shift)	>> (Right shift)
+	cout << "Hello";	//Insertion / put-to operator
+	cin >> a;			//Extraction / get-from operator
+	
+	Inline function
+	
+	RAM - 1MB
+	Floppy	-	1.44 (1.2) MB
+	
+	MERN: Mongodb ExpressJS ReactJS NodeJS
+	
+	

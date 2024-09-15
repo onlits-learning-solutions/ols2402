@@ -1,0 +1,32 @@
+
+ Transaction = Issue & Return
+ 
+ Issue is a relationship between Book & Member
+ 
+ 1. Create a page for transaction home
+ 2. Create a page for issue book
+ 		a. Search for book using book id
+ 		b. Search for member using member id
+ 
+ Refactoring
+ 
+ Paradigm: A programming paradigm is a model or style of programming that defines a set of principles, techniques, and patterns for structuring code to solve problems on a computer. It shapes the way programmers design, organize, and write programs.
+ 
+ Statement/Structure/Construct
+ 	- if-else
+ 	- loops
+ 	
+ 	- procedure/function (re-usable modules)
+ 	
+ 	- object (data + function)
+ 	
+ 	Normalization
+ 		- DBMS
+ 		
+ 	Magazine subscription
+ 		- Developer 2.0
+ 		- Digit
+ 		- Wisdom
+ 		
+ 	40000
+ 	41000

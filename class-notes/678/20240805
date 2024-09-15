@@ -1,0 +1,30 @@
+
+	C:
+		Type	-	sum.c
+		Compile	-	a.out/a.exe or sum.out/sum.exe
+		
+		Here, .out or .exe files are directly executed by OS.
+		
+	gcc sum.c	-	a.out/a.exe
+	gcc sum.c -o sum.out/sum.exe	-	sum.out/sum.exe
+	
+	
+	Java:
+		Type	-	Sum.java
+		Compile	-	Sum.class (bytecode) - IL Code
+
+	Here, .class file are interpreted to OS by JVM.
+	
+	Routine is a collection of periods.
+	
+	
+	period
+		id	 - 1,2,...
+		day	 - Monday
+		time - 10:00-12:00
+		subject - java
+		teacher  - John Doe
+		
+	Refactor
+	
+	

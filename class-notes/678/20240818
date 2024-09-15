@@ -1,0 +1,62 @@
+
+	class Switch {
+		bool mode = false;
+		
+		void on() {
+			mode = true;
+		}
+		
+		void off() {
+			mode = false;
+		}
+		
+		int getMode() {
+			return mode;
+		}
+	}
+	
+	interface	-	not available in C++
+	
+	boolean	-	binary
+	
+	
+	if(n == 10)	-	0 or non-zero
+	
+	if(n==0)	-	TRUE or FALSE
+	
+	packages
+	
+	Relational Algebra (Theory)	-	SQL (Practical)
+	Relational Calculus
+	
+	package is collection of class
+		we use package as namespace
+		
+	Fully qualified name
+	
+	java.lang.System
+	java.util.Scanner
+	java.lang.String
+	
+	javax.http.servlet.HttpServlet
+	
+	mypack.System
+	
+	We should attempt to make 'mypack' unique globally.
+	
+	org.mariadb.jdbc.Connection
+	java.sql.Connection
+	
+	onlits.com	-	domain name
+	
+	com.onlits.epustakalaya.Book
+	
+	package ols2402.classobjectassignment;
+	
+	class Invoice {
+	
+	}
+	
+	ols2402.classobjectassignment.Invoice
+	
+	

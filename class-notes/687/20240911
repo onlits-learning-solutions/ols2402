@@ -1,0 +1,20 @@
+
+	DSA:
+	
+	Logarithms
+	
+	C
+	
+	POP, OOP (C++, Java)
+	
+	int a = 10;	//0000000000000000000001010
+	Array
+	
+	1010	->	101
+	
+	1010	->	1011
+	1011	->	1001
+	1001	->	1101
+	1101	->	0101
+	
+	Select email from users where email='';

@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+}
+
+header {
+    background-color: blueviolet;
+    padding: 10px;
+    color: white;
+}
+
+nav {
+    background-color: black;
+    margin-bottom: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border: 1px black solid;
+}
+
+nav a:hover {
+    border: 1px white solid;
+    border-radius: 5px;
+}
+
+h1.type-1 {
+    color: red;
+}
+
+.card-container-1{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.card-1 {
+    border: 1px solid black;
+    width: 200px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.card-1-title {
+    font-size: 1vw;
+    padding: 1px;
+}
+
+.card-1-content {
+    text-align: center;
+    font-size: 1.8vw;
+}
+
+.card-container-chart{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.card-chart {
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.card-chart-title {
+    font-size: 10pt;
+    padding: 10px;
+}
+
+.card-chart-content {
+    text-align: center;
+    font-size: 18pt;
+}
+
+@media screen and (max-width: 800px) {
+    .card-container-1 .card-container-chart {
+        display: none;
+    }
+}

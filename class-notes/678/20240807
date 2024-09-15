@@ -1,0 +1,53 @@
+
+	Coupling	-	Inter-module communication		-	loose
+	Cohesion	-	Communication within the object	-	tight
+	
+	Objects are instance of a class
+	
+	engine
+	car
+	
+	Fiat (Italy)
+	
+	IS-A		-	Type
+	HAS-A		-	component
+	PART-OF		-	Important component
+	
+	WAP to read two complex number and add them.
+	
+	class complex
+	{
+		float real;
+		float imaginary;
+	
+		void getdata()		//input
+		{
+		
+		}
+		
+		void putdata()		//output
+		{
+		
+		}
+			
+		complex sum(complex x)
+		{
+			complex t;
+			t.real = this->real + x.real;
+			t.imaginary = this->imaginary + x.imaginary;
+			return t;
+		}
+	};
+	
+	int main(void)
+	{
+		complex c1, c2, c3;
+		c3 = c1.sum(c2);
+	}
+	
+	ambiguity resolution
+	
+	this is pointer to the current object.
+	
+	
+	

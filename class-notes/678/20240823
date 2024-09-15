@@ -1,0 +1,57 @@
+
+	Access specifier/modifier
+		public (anywhere)
+		private
+		protected (Inheritance)
+		default (package scope)
+		
+		switch()
+		{
+			case 1:
+			
+				break;
+			case 2:
+			
+			
+				break;
+			default:
+		}
+		
+	int test()
+	{
+		static int i=0;
+		return ++i;
+	}
+	
+	int main(void)
+	{
+		for(int i=1; i<=5; i++)
+		{
+			cout << test();
+		}
+	}
+	
+	
+	//C++
+	
+	int main(void)
+	{
+		Invoice invoice;	//Here invoice is an object.
+		Invoice *invoice = new Invoice();	//dynamic instantiation
+	}
+	
+	
+	public static void main(String[] args) {
+		Invoice invoice = new Invoice();	// Here invoice is a
+											// reference variable.
+	}
+	
+	
+	malloc(), calloc()
+	
+	main()
+	{
+	
+	}
+	
+	

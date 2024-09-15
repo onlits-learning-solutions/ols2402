@@ -1,0 +1,80 @@
+
+	POP	-	Top down problem solving
+		structure
+			typedef struct time
+			{
+				int hour;
+				int minute;
+				int second;
+			}TIME;
+			
+			struct period
+			{
+				char id[6]
+				char day[4];
+				Time time;
+				char subject[20];
+				char teacher[5];
+			};
+			
+			typedef struct routine
+			{
+				struct period periods[50];
+			}ROUTINE;
+			
+			void addPeriod(ROUTINE *class, char *id)
+			{
+				strcpy(class->id, *id);
+				strcpy(class->days, "Monday");
+			}
+			
+			int main(void)
+			{
+				ROUTINE cses1;			//2000 bytes
+				addPeriod(&cses1, "MON01");
+			}
+			
+			
+	Class routine: is a collection of periods.
+	
+	OOP -	Bottom up problem solving
+	
+	
+	Encapsulation
+	Abstraction
+	Inheritance - code reusability
+	Polymorphism
+	
+	STEM	-	Science Technology Engineering Mathematics
+	
+	Scholastic Development
+	Holistic Development
+	
+	
+	LSCRWG
+	
+	Neh
+	Achcha
+	
+	Object -	data
+	Variables, array	-	data
+	
+	Can we create two functions with the same name in C.
+	
+	int sum(int a, int b)
+	{
+		return a + b;
+	}
+	
+	int sum(int a, int b, int c)
+	{
+		return a + b + c;
+	}
+	
+	Function/Method Overloading
+	
+	array			-	fixed
+	linked list		-	flexible
+	
+	
+	
