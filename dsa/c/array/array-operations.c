@@ -7,24 +7,25 @@
 void drawLine(int n);
 void messageBox(char *message);
 void display(int *arr, int size);
-void insertBeginning(int *arr, int size);
+void insertBeginning(int *arr, int *size);
 void insertEnd(int *arr, int *size);
-void insert(int *arr, int size, int index);
+void insert(int *arr, int *size);
 
 int main(int argc, char const *argv[])
 {
     int arr[MAX], size = 0;
     int ch;
+    int linesize = strlen("2. Insert element at the beginning");
 
-    while (1)
+    while (1) // O(~)
     {
         printf("\nMAIN MENU\n");
-        drawLine(strlen("2. Insert element at the beginning"));
+        drawLine(linesize);
         printf("\n1. Display list (Traversal)\n");
         printf("2. Insert element at the beginning\n");
         printf("3. Insert element at the end\n");
         printf("4. Insert element at a given index\n");
-        drawLine(strlen("2. Insert element at the beginning"));
+        drawLine(linesize);
         printf("\nEnter choice [0 to exit]: ");
         scanf("%d", &ch);
 
@@ -37,6 +38,9 @@ int main(int argc, char const *argv[])
         case 1:
             display(arr, size);
             break;
+        case 2:
+            insertBeginning(arr, &size);
+            break;
         case 3:
             insertEnd(arr, &size);
             break;
@@ -48,7 +52,7 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-void drawLine(int n)
+void drawLine(int n) // O(n)
 {
     for (int i = 1; i <= n; i++)
     {
@@ -56,7 +60,7 @@ void drawLine(int n)
     }
 }
 
-void messageBox(char *message)
+void messageBox(char *message) // O(1)
 {
     printf("\n");
     drawLine(strlen(message));
@@ -65,9 +69,9 @@ void messageBox(char *message)
     printf("\n");
 }
 
-void display(int *arr, int size)
+void display(int *arr, int size) // O(n)
 {
-    if(size == 0)
+    if (size == 0)
     {
         messageBox("Array empty!");
         return;
@@ -83,14 +87,28 @@ void display(int *arr, int size)
     printf("\n\n");
 }
 
-void insertBeginning(int *arr, int size)
+void insertBeginning(int *arr, int *size) // O(n)
 {
+    if (*size >= MAX)
+    {
+        messageBox("Array full!");
+        return;
+    }
 
+    for (int i = *size; i > 0; i--)
+        arr[i] = arr[i - 1];
+
+    printf("Enter a value: ");
+    scanf("%d", &arr[0]);
+
+    (*size)++;
+
+    messageBox("Value inserted!");
 }
 
-void insertEnd(int *arr, int *size)
+void insertEnd(int *arr, int *size) // O(1)
 {
-    if(*size >= MAX)
+    if (*size >= MAX)
     {
         messageBox("Array full!");
         return;
@@ -104,7 +122,25 @@ void insertEnd(int *arr, int *size)
     messageBox("Value inserted!");
 }
 
-void insert(int *arr, int size, int index)
+void insert(int *arr, int *size)
 {
+    int index;
+    if (*size >= MAX)
+    {
+        messageBox("Array full!");
+        return;
+    }
 
+    printf("Enter index: ");
+    scanf("%d", &index);
+
+    for (int i = *size; i > index; i--)
+        arr[i] = arr[i - 1];
+
+    printf("Enter a value: ");
+    scanf("%d", &arr[index]);
+
+    (*size)++;
+
+    messageBox("Value inserted!");
 }
