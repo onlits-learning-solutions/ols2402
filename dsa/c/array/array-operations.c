@@ -2,10 +2,24 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define RED "\x1b[31m"
+#define GREEN "\x1b[32m"
+#define BLUE "\x1b[34m"
+#define RESET "\x1b[0m"
+
+#define BOLD "\e[1m"
+#define ITALICS "\e[3m"
+#define UNDERLINE "\e[4m"
+#define OFF "\e[m"
+
+#define ERROR 0
+#define INFO 1
+#define NORMAL 2
+
 #define MAX 100
 
-void drawLine(int n);
-void messageBox(char *message);
+void drawLine(int n, int type);
+void messageBox(char *message, int type);
 void display(int const *arr, int size);
 void insertBeginning(int *arr, int *size);
 void insertEnd(int *arr, int *size);
@@ -24,8 +38,8 @@ int main(int argc, char const *argv[])
 
     while (1) // O(~)
     {
-        printf("\nMAIN MENU\n");
-        drawLine(linesize);
+        printf(BOLD "\nMAIN MENU\n" OFF);
+        drawLine(linesize, NORMAL);
         printf("\n1. Display list (Traversal)\n");
         printf("2. Insert element at the beginning\n");
         printf("3. Insert element at the end\n");
@@ -36,14 +50,14 @@ int main(int argc, char const *argv[])
         printf("8. Search (using linear search)\n");
         printf("9. Search (using binary search)\n");
 
-        drawLine(linesize);
+        drawLine(linesize, NORMAL);
         printf("\nEnter choice [0 to exit]: ");
         scanf("%d", &ch);
 
         switch (ch)
         {
         case 0:
-            printf("\nbye!\n\n");
+            printf(BLUE BOLD "\nbye!\n\n" RESET);
             exit(0);
             break;
         case 1:
@@ -71,27 +85,37 @@ int main(int argc, char const *argv[])
             linearSearch(arr, size);
             break;
         default:
-            messageBox("Invalid Option!");
+            messageBox("Invalid Option!", ERROR);
             break;
         }
     }
     return 0;
 }
 
-void drawLine(int n) // O(n)
+void drawLine(int n, int type) // O(n)
 {
     for (int i = 1; i <= n; i++)
     {
-        printf("-");
+        if (type == INFO)
+            printf(GREEN BOLD "-" OFF RESET);
+        else if (type == ERROR)
+            printf(RED BOLD "-" OFF RESET);
+        else
+            printf("-");
     }
 }
 
-void messageBox(char *message) // O(1)
+void messageBox(char *message, int type) // O(1)
 {
     printf("\n");
-    drawLine(strlen(message));
-    printf("\n%s\n", message);
-    drawLine(strlen(message));
+    drawLine(strlen(message), type);
+    if (type == INFO)
+        printf(GREEN BOLD "\n%s\n" OFF RESET, message);
+    else if (type == ERROR)
+        printf(RED BOLD "\n%s\n" OFF RESET, message);
+    else
+        printf("\n%s\n", message);
+    drawLine(strlen(message), type);
     printf("\n");
 }
 
@@ -99,18 +123,18 @@ void display(int const *arr, int size) // O(n)
 {
     if (size == 0)
     {
-        messageBox("Array empty!");
+        messageBox("Array empty!", ERROR);
         return;
     }
 
     printf("\nArray Content:\n");
-    drawLine(strlen("Array Content:"));
+    drawLine(strlen("Array Content:"), NORMAL);
     printf("\n");
     for (int i = 0; i < size; i++)
     {
         printf("%d\n", arr[i]);
     }
-    drawLine(strlen("Array Content:"));
+    drawLine(strlen("Array Content:"), NORMAL);
     printf("\n\n");
 }
 
@@ -118,7 +142,7 @@ void insertBeginning(int *arr, int *size) // O(n)
 {
     if (*size >= MAX)
     {
-        messageBox("Array full!");
+        messageBox("Array full!", ERROR);
         return;
     }
 
@@ -130,14 +154,14 @@ void insertBeginning(int *arr, int *size) // O(n)
 
     (*size)++;
 
-    messageBox("Value inserted!");
+    messageBox("Value inserted!", INFO);
 }
 
 void insertEnd(int *arr, int *size) // O(1)
 {
     if (*size >= MAX)
     {
-        messageBox("Array full!");
+        messageBox("Array full!", ERROR);
         return;
     }
 
@@ -146,7 +170,7 @@ void insertEnd(int *arr, int *size) // O(1)
 
     (*size)++;
 
-    messageBox("Value inserted!");
+    messageBox("Value inserted!", INFO);
 }
 
 void insert(int *arr, int *size) // O(n)
@@ -154,7 +178,7 @@ void insert(int *arr, int *size) // O(n)
     int index;
     if (*size >= MAX)
     {
-        messageBox("Array full!");
+        messageBox("Array full!", ERROR);
         return;
     }
 
@@ -163,7 +187,7 @@ void insert(int *arr, int *size) // O(n)
 
     if (index > *size || index < 0)
     {
-        messageBox("Not a valid index!");
+        messageBox("Not a valid index!", ERROR);
         return;
     }
 
@@ -175,14 +199,14 @@ void insert(int *arr, int *size) // O(n)
 
     (*size)++;
 
-    messageBox("Value inserted!");
+    messageBox("Value inserted!", INFO);
 }
 
 void deleteBeginning(int *arr, int *size) // O(n)
 {
     if (*size == 0)
     {
-        messageBox("Array empty!");
+        messageBox("Array empty!", ERROR);
         return;
     }
 
@@ -191,20 +215,20 @@ void deleteBeginning(int *arr, int *size) // O(n)
 
     (*size)--;
 
-    messageBox("Value removed!");
+    messageBox("Value removed!", INFO);
 }
 
 void deleteEnd(int *arr, int *size) // O(1)
 {
     if (*size == 0)
     {
-        messageBox("Array empty!");
+        messageBox("Array empty!", ERROR);
         return;
     }
 
     (*size)--;
 
-    messageBox("Value removed!");
+    messageBox("Value removed!", INFO);
 }
 
 void delete(int *arr, int *size) // O(n)
@@ -213,7 +237,7 @@ void delete(int *arr, int *size) // O(n)
 
     if (*size == 0)
     {
-        messageBox("Array empty!");
+        messageBox("Array empty!", ERROR);
         return;
     }
 
@@ -222,7 +246,7 @@ void delete(int *arr, int *size) // O(n)
 
     if (index > *size || index < 0)
     {
-        messageBox("Not a valid index!");
+        messageBox("Not a valid index!", ERROR);
         return;
     }
 
@@ -231,15 +255,15 @@ void delete(int *arr, int *size) // O(n)
 
     (*size)--;
 
-    messageBox("Value removed!");
+    messageBox("Value removed!", INFO);
 }
 
-void linearSearch(int const *arr, int size)
+void linearSearch(int const *arr, int size) // O(n)
 {
     int key, index = -1;
     if (size == 0)
     {
-        messageBox("Array empty!");
+        messageBox("Array empty!", ERROR);
         return;
     }
 
@@ -256,12 +280,14 @@ void linearSearch(int const *arr, int size)
     }
 
     if (index == -1)
-        messageBox("Value not found!");
+        messageBox("Value not found!", ERROR);
     else
     {
-        char *strIndex;
+        char *strIndex, message[50];
+        strIndex = malloc(40); // To be resolved
         sprintf(strIndex, "%d", index);
-        messageBox(strcat("Value found at index", strIndex));
+        strcpy(message, "Value found at index");
+        messageBox(strcat(message, strIndex), INFO);
     }
 }
 
