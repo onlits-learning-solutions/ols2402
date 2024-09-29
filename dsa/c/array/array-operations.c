@@ -28,7 +28,7 @@ void deleteBeginning(int *arr, int *size);
 void deleteEnd(int *arr, int *size);
 void delete(int *arr, int *size);
 void linearSearch(int const *arr, int size);
-void binearSearch(int const *arr, int size);
+void binearySearch(int const *arr, int size);
 
 int main(int argc, char const *argv[])
 {
@@ -83,6 +83,9 @@ int main(int argc, char const *argv[])
             break;
         case 8:
             linearSearch(arr, size);
+            break;
+        case 9:
+            binearySearch(arr, size);
             break;
         default:
             messageBox("Invalid Option!", ERROR);
@@ -258,6 +261,20 @@ void delete(int *arr, int *size) // O(n)
     messageBox("Value removed!", INFO);
 }
 
+void printSearchMessage(int index)
+{
+    if (index == -1)
+        messageBox("Value not found!", ERROR);
+    else
+    {
+        char *strIndex, message[50];
+        strIndex = malloc(40); // To be resolved
+        sprintf(strIndex, "%d", index);
+        strcpy(message, "Value found at index ");
+        messageBox(strcat(message, strIndex), INFO);
+    }
+}
+
 void linearSearch(int const *arr, int size) // O(n)
 {
     int key, index = -1;
@@ -279,18 +296,36 @@ void linearSearch(int const *arr, int size) // O(n)
         }
     }
 
-    if (index == -1)
-        messageBox("Value not found!", ERROR);
-    else
-    {
-        char *strIndex, message[50];
-        strIndex = malloc(40); // To be resolved
-        sprintf(strIndex, "%d", index);
-        strcpy(message, "Value found at index");
-        messageBox(strcat(message, strIndex), INFO);
-    }
+    printSearchMessage(index);
 }
 
-void binearSearch(int const *arr, int size)
+void binearySearch(int const *arr, int size) // O(log n)
 {
+    int key, low = 0, high = size - 1, mid, index = -1;
+
+    if (size == 0)
+    {
+        messageBox("Array empty!", ERROR);
+        return;
+    }
+
+    printf("Enter the value to search: ");
+    scanf("%d", &key);
+
+    while (low <= high)
+    {
+        mid = (low + high) / 2;
+
+        if (arr[mid] == key)
+        {
+            index = mid;
+            break;
+        }
+
+        if (key < arr[mid])
+            high = mid - 1;
+        else
+            low = mid + 1;
+    }
+    printSearchMessage(index);
 }
