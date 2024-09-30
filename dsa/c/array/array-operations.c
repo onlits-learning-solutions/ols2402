@@ -28,7 +28,8 @@ void deleteBeginning(int *arr, int *size);
 void deleteEnd(int *arr, int *size);
 void delete(int *arr, int *size);
 void linearSearch(int const *arr, int size);
-void binearySearch(int const *arr, int size);
+void binearySearch(int *arr, int size);
+int isSorted(int *arr, int size);
 
 int main(int argc, char const *argv[])
 {
@@ -40,15 +41,18 @@ int main(int argc, char const *argv[])
     {
         printf(BOLD "\nMAIN MENU\n" OFF);
         drawLine(linesize, NORMAL);
-        printf("\n1. Display list (Traversal)\n");
-        printf("2. Insert element at the beginning\n");
-        printf("3. Insert element at the end\n");
-        printf("4. Insert element at a given index\n");
-        printf("5. Delete element from beginning\n");
-        printf("6. Delete element from the end\n");
-        printf("7. Delete element at the given index\n");
-        printf("8. Search (using linear search)\n");
-        printf("9. Search (using binary search)\n");
+        printf("\n1.  Display list (Traversal)\n");
+        printf("2.  Insert element at the beginning\n");
+        printf("3.  Insert element at the end\n");
+        printf("4.  Insert element at a given index\n");
+        printf("5.  Delete element from beginning\n");
+        printf("6.  Delete element from the end\n");
+        printf("7.  Delete element at the given index\n");
+        printf("8.  Search (using linear search)\n");
+        printf("9.  Search (using binary search)\n");
+        printf("10. Check array sort status\n");
+        printf("11. Sort (Radix - 1887)\n");
+        printf("12. Sort (Bubble - 1956)\n");
 
         drawLine(linesize, NORMAL);
         printf("\nEnter choice [0 to exit]: ");
@@ -86,6 +90,12 @@ int main(int argc, char const *argv[])
             break;
         case 9:
             binearySearch(arr, size);
+            break;
+        case 10:
+            if (size == 0)
+                messageBox("Array empty!", ERROR);
+            else
+                isSorted(arr, size) == 1 ? messageBox("Array is sorted!", INFO) : messageBox("Array is unsorted", ERROR);
             break;
         default:
             messageBox("Invalid Option!", ERROR);
@@ -299,13 +309,20 @@ void linearSearch(int const *arr, int size) // O(n)
     printSearchMessage(index);
 }
 
-void binearySearch(int const *arr, int size) // O(log n)
+void binearySearch(int *arr, int size) // O(log n)
 {
     int key, low = 0, high = size - 1, mid, index = -1;
 
     if (size == 0)
     {
         messageBox("Array empty!", ERROR);
+        return;
+    }
+
+    if(isSorted(arr, size) == 0)
+    {
+        // printf("%p", isSorted);
+        messageBox("Array is not sorted!", ERROR);
         return;
     }
 
@@ -328,4 +345,14 @@ void binearySearch(int const *arr, int size) // O(log n)
             low = mid + 1;
     }
     printSearchMessage(index);
+}
+
+int isSorted(int *arr, int size)
+{
+    for (int i = 0; i < size - 1; i++)
+    {
+        if (arr[i] > arr[i + 1])
+            return 0;
+    }
+    return 1;
 }
