@@ -18,6 +18,11 @@
 
 #define MAX 100
 
+void insertMenu(int *arr, int *size);
+void deleteMenu();
+void searchMenu();
+void sortMenu();
+
 void drawLine(int n, int type);
 void messageBox(char *message, int type);
 void display(int const *arr, int size);
@@ -35,25 +40,17 @@ int main(int argc, char const *argv[])
 {
     int arr[MAX], size = 0, sorted = 0;
     int ch;
-    int linesize = strlen("7. Delete element at the given index");
+    int linesize = strlen("1.  Display list (Traversal)");
 
-    while (1) // O(~)
-    {
+    while (1) // Cannot determine complexity as this process does not comply
+    {         // standard algorithm definition
         printf(BOLD "\nMAIN MENU\n" OFF);
         drawLine(linesize, NORMAL);
         printf("\n1.  Display list (Traversal)\n");
-        printf("2.  Insert element at the beginning\n");
-        printf("3.  Insert element at the end\n");
-        printf("4.  Insert element at a given index\n");
-        printf("5.  Delete element from beginning\n");
-        printf("6.  Delete element from the end\n");
-        printf("7.  Delete element at the given index\n");
-        printf("8.  Search (using linear search)\n");
-        printf("9.  Search (using binary search)\n");
-        printf("10. Check array sort status\n");
-        printf("11. Sort (Radix - 1887)\n");
-        printf("12. Sort (Bubble - 1956)\n");
-
+        printf("2.  Insert\n");
+        printf("3.  Delete\n");
+        printf("4.  Search\n");
+        printf("5.  Sort\n");
         drawLine(linesize, NORMAL);
         printf("\nEnter choice [0 to exit]: ");
         scanf("%d", &ch);
@@ -68,34 +65,16 @@ int main(int argc, char const *argv[])
             display(arr, size);
             break;
         case 2:
-            insertBeginning(arr, &size);
+            insertMenu(arr, &size);
             break;
         case 3:
-            insertEnd(arr, &size);
+            deleteMenu();
             break;
         case 4:
-            insert(arr, &size);
+            searchMenu();
             break;
         case 5:
-            deleteBeginning(arr, &size);
-            break;
-        case 6:
-            deleteEnd(arr, &size);
-            break;
-        case 7:
-            delete (arr, &size);
-            break;
-        case 8:
-            linearSearch(arr, size);
-            break;
-        case 9:
-            binearySearch(arr, size);
-            break;
-        case 10:
-            if (size == 0)
-                messageBox("Array empty!", ERROR);
-            else
-                isSorted(arr, size) == 1 ? messageBox("Array is sorted!", INFO) : messageBox("Array is unsorted", ERROR);
+            sortMenu();
             break;
         default:
             messageBox("Invalid Option!", ERROR);
@@ -103,6 +82,57 @@ int main(int argc, char const *argv[])
         }
     }
     return 0;
+}
+
+void insertMenu(int *arr, int *size)
+{
+    int ch, exit = 0;
+    int linesize = strlen("3.  Insert at a specific index");
+    while (1)
+    {
+        printf(BOLD "\nINSERT MENU\n" OFF);
+        drawLine(linesize, NORMAL);
+        printf("\n1.  Insert at the beginning\n");
+        printf("2.  Insert at the end\n");
+        printf("3.  Insert at a specific index\n");
+        drawLine(linesize, NORMAL);
+        printf("\nEnter choice [0 for MAIN MENU]: ");
+        scanf("%d", &ch);
+
+        switch (ch)
+        {
+        case 0:
+            exit = 1;
+            break;
+        case 1:
+            // insertBeginning();
+            break;
+        case 2:
+            // insertEnd();
+            break;
+        case 3:
+            // insert();
+            break;
+        default:
+            messageBox("Invalid Option!", ERROR);
+            break;
+        }
+
+        if (exit == 1)
+            break;
+    }
+}
+
+void deleteMenu()
+{
+}
+
+void searchMenu()
+{
+}
+
+void sortMenu()
+{
 }
 
 void drawLine(int n, int type) // O(n)
@@ -319,7 +349,7 @@ void binearySearch(int *arr, int size) // O(log n)
         return;
     }
 
-    if(isSorted(arr, size) == 0)
+    if (isSorted(arr, size) == 0)
     {
         // printf("%p", isSorted);
         messageBox("Array is not sorted!", ERROR);
