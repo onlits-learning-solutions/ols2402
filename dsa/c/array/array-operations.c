@@ -19,26 +19,32 @@
 #define MAX 100
 
 void insertMenu(int *arr, int *size);
-void deleteMenu();
-void searchMenu();
-void sortMenu();
+void deleteMenu(int *arr, int *size);
+void searchMenu(int *arr, int size);
+void sortMenu(int *arr, int size);
 
 void drawLine(int n, int type);
 void messageBox(char *message, int type);
+
 void display(int const *arr, int size);
+
 void insertBeginning(int *arr, int *size);
 void insertEnd(int *arr, int *size);
 void insert(int *arr, int *size);
+
 void deleteBeginning(int *arr, int *size);
 void deleteEnd(int *arr, int *size);
 void delete(int *arr, int *size);
+
 void linearSearch(int const *arr, int size);
 void binearySearch(int *arr, int size);
+
 int isSorted(int *arr, int size);
+void bubbleSort(int *arr, int size);
 
 int main(int argc, char const *argv[])
 {
-    int arr[MAX], size = 0, sorted = 0;
+    int arr[MAX], size = 0;
     int ch;
     int linesize = strlen("1.  Display list (Traversal)");
 
@@ -46,11 +52,11 @@ int main(int argc, char const *argv[])
     {         // standard algorithm definition
         printf(BOLD "\nMAIN MENU\n" OFF);
         drawLine(linesize, NORMAL);
-        printf("\n1.  Display list (Traversal)\n");
-        printf("2.  Insert\n");
-        printf("3.  Delete\n");
-        printf("4.  Search\n");
-        printf("5.  Sort\n");
+        printf("\n1. Display list (Traversal)\n");
+        printf("2. Insert\n");
+        printf("3. Delete\n");
+        printf("4. Search\n");
+        printf("5. Sort\n");
         drawLine(linesize, NORMAL);
         printf("\nEnter choice [0 to exit]: ");
         scanf("%d", &ch);
@@ -68,13 +74,13 @@ int main(int argc, char const *argv[])
             insertMenu(arr, &size);
             break;
         case 3:
-            deleteMenu();
+            deleteMenu(arr, &size);
             break;
         case 4:
-            searchMenu();
+            searchMenu(arr, size);
             break;
         case 5:
-            sortMenu();
+            sortMenu(arr, size);
             break;
         default:
             messageBox("Invalid Option!", ERROR);
@@ -92,9 +98,9 @@ void insertMenu(int *arr, int *size)
     {
         printf(BOLD "\nINSERT MENU\n" OFF);
         drawLine(linesize, NORMAL);
-        printf("\n1.  Insert at the beginning\n");
-        printf("2.  Insert at the end\n");
-        printf("3.  Insert at a specific index\n");
+        printf("\n1. Insert at the beginning\n");
+        printf("2. Insert at the end\n");
+        printf("3. Insert at a specific index\n");
         drawLine(linesize, NORMAL);
         printf("\nEnter choice [0 for MAIN MENU]: ");
         scanf("%d", &ch);
@@ -105,13 +111,13 @@ void insertMenu(int *arr, int *size)
             exit = 1;
             break;
         case 1:
-            // insertBeginning();
+            insertBeginning(arr, size);
             break;
         case 2:
-            // insertEnd();
+            insertEnd(arr, size);
             break;
         case 3:
-            // insert();
+            insert(arr, size);
             break;
         default:
             messageBox("Invalid Option!", ERROR);
@@ -123,16 +129,115 @@ void insertMenu(int *arr, int *size)
     }
 }
 
-void deleteMenu()
+void deleteMenu(int *arr, int *size)
 {
+    int ch, exit = 0;
+    int linesize = strlen("3.  Delete from a specific index");
+    while (1)
+    {
+        printf(BOLD "\nDELETE MENU\n" OFF);
+        drawLine(linesize, NORMAL);
+        printf("\n1. Delete from the beginning\n");
+        printf("2. Delete from the end\n");
+        printf("3. Delete from a specific index\n");
+        drawLine(linesize, NORMAL);
+        printf("\nEnter choice [0 for MAIN MENU]: ");
+        scanf("%d", &ch);
+
+        switch (ch)
+        {
+        case 0:
+            exit = 1;
+            break;
+        case 1:
+            deleteBeginning(arr, size);
+            break;
+        case 2:
+            deleteEnd(arr, size);
+            break;
+        case 3:
+            delete (arr, size);
+            break;
+        default:
+            messageBox("Invalid Option!", ERROR);
+            break;
+        }
+
+        if (exit == 1)
+            break;
+    }
 }
 
-void searchMenu()
+void searchMenu(int *arr, int size)
 {
+    int ch, exit = 0;
+    int linesize = strlen("Enter choice [0 for MAIN MENU]: ");
+    while (1)
+    {
+        printf(BOLD "\nSEARCH MENU\n" OFF);
+        drawLine(linesize, NORMAL);
+        printf("\n1. Linear Search\n");
+        printf("2. Binary Search\n");
+        drawLine(linesize, NORMAL);
+        printf("\nEnter choice [0 for MAIN MENU]: ");
+        scanf("%d", &ch);
+
+        switch (ch)
+        {
+        case 0:
+            exit = 1;
+            break;
+        case 1:
+            linearSearch(arr, size);
+            break;
+        case 2:
+            binearySearch(arr, size);
+            break;
+        default:
+            messageBox("Invalid Option!", ERROR);
+            break;
+        }
+
+        if (exit == 1)
+            break;
+    }
 }
 
-void sortMenu()
+void sortMenu(int *arr, int size)
 {
+    int ch, exit = 0;
+    int linesize = strlen("3.  Delete from a specific index");
+    while (1)
+    {
+        printf(BOLD "\nSORT MENU\n" OFF);
+        drawLine(linesize, NORMAL);
+        printf("\n1. Radix Sort - 1887\n");
+        printf("2. Bubble Sort\n");
+        printf("3. Selection Sort\n");
+        printf("4. Insertion Sort\n");
+        drawLine(linesize, NORMAL);
+        printf("\nEnter choice [0 for MAIN MENU]: ");
+        scanf("%d", &ch);
+
+        switch (ch)
+        {
+        case 0:
+            exit = 1;
+            break;
+        case 1:
+            messageBox("Under Construction...", ERROR);
+            break;
+        case 2:
+            bubbleSort(arr, size);
+            break;
+        default:
+            messageBox("Invalid Option!", ERROR);
+            break;
+        }
+
+        if (exit == 1)
+            break;
+    }
 }
 
 void drawLine(int n, int type) // O(n)
@@ -349,7 +454,7 @@ void binearySearch(int *arr, int size) // O(log n)
         return;
     }
 
-    if (isSorted(arr, size) == 0)
+    if (!isSorted(arr, size))
     {
         // printf("%p", isSorted);
         messageBox("Array is not sorted!", ERROR);
@@ -377,7 +482,7 @@ void binearySearch(int *arr, int size) // O(log n)
     printSearchMessage(index);
 }
 
-int isSorted(int *arr, int size)
+int isSorted(int *arr, int size) // O(n)
 {
     for (int i = 0; i < size - 1; i++)
     {
@@ -385,4 +490,21 @@ int isSorted(int *arr, int size)
             return 0;
     }
     return 1;
+}
+
+void bubbleSort(int *arr, int size)
+{
+    if (!size)
+    {
+        messageBox("Array empty!", ERROR);
+        return;
+    }
+
+    if (isSorted(arr, size))
+    {
+        messageBox("Array already sorted!", INFO);
+        return;
+    }
+
+    
 }
