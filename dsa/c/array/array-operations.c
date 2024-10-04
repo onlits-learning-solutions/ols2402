@@ -25,6 +25,7 @@ void sortMenu(int *arr, int size);
 
 void drawLine(int n, int type);
 void messageBox(char *message, int type);
+void swap(int *a, int *b);
 
 void display(int const *arr, int size);
 
@@ -267,6 +268,13 @@ void messageBox(char *message, int type) // O(1)
     printf("\n");
 }
 
+void swap(int *a, int *b)
+{
+    int t = *a;
+    *a = *b;
+    *b = t;
+}
+
 void display(int const *arr, int size) // O(n)
 {
     if (size == 0)
@@ -506,5 +514,18 @@ void bubbleSort(int *arr, int size)
         return;
     }
 
+    for (int i = 1; i < size; i++)
+    {
+        for (int j = 0; j < size - i; j++)
+        {
+            if(arr[j] > arr[j+1])
+                swap(&arr[j], &arr[j+1]);
+        }
+    }
+    messageBox("Array sorted!", INFO);
+}
+
+void selectionSort(int *arr, int size)
+{
     
 }
