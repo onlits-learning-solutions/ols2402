@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 #define RED "\x1b[31m"
 #define GREEN "\x1b[32m"
@@ -16,7 +17,7 @@
 #define INFO 1
 #define NORMAL 2
 
-#define MAX 100
+#define MAX 1000000
 
 void insertMenu(int *arr, int *size);
 void deleteMenu(int *arr, int *size);
@@ -26,7 +27,7 @@ void sortMenu(int *arr, int size);
 void drawLine(int n, int type);
 void messageBox(char *message, int type);
 void swap(int *a, int *b);
-
+void seed(int *arr, int *size);
 void display(int const *arr, int size);
 
 void insertBeginning(int *arr, int *size);
@@ -36,12 +37,14 @@ void insert(int *arr, int *size);
 void deleteBeginning(int *arr, int *size);
 void deleteEnd(int *arr, int *size);
 void delete(int *arr, int *size);
+void deleteAll(int *arr, int *size);
 
 void linearSearch(int const *arr, int size);
 void binearySearch(int *arr, int size);
 
 int isSorted(int *arr, int size);
 void bubbleSort(int *arr, int size);
+void selectionSort(int *arr, int size);
 
 int main(int argc, char const *argv[])
 {
@@ -58,6 +61,8 @@ int main(int argc, char const *argv[])
         printf("3. Delete\n");
         printf("4. Search\n");
         printf("5. Sort\n");
+        printf("6. Check sort status\n");
+        printf("7. Seed Array\n");
         drawLine(linesize, NORMAL);
         printf("\nEnter choice [0 to exit]: ");
         scanf("%d", &ch);
@@ -82,6 +87,12 @@ int main(int argc, char const *argv[])
             break;
         case 5:
             sortMenu(arr, size);
+            break;
+        case 6:
+            isSorted(arr, size);
+            break;
+        case 7:
+            seed(arr, &size);
             break;
         default:
             messageBox("Invalid Option!", ERROR);
@@ -141,6 +152,7 @@ void deleteMenu(int *arr, int *size)
         printf("\n1. Delete from the beginning\n");
         printf("2. Delete from the end\n");
         printf("3. Delete from a specific index\n");
+        printf("4. Delete All\n");
         drawLine(linesize, NORMAL);
         printf("\nEnter choice [0 for MAIN MENU]: ");
         scanf("%d", &ch);
@@ -158,6 +170,9 @@ void deleteMenu(int *arr, int *size)
             break;
         case 3:
             delete (arr, size);
+            break;
+        case 4:
+            deleteAll(arr, size);
             break;
         default:
             messageBox("Invalid Option!", ERROR);
@@ -231,6 +246,9 @@ void sortMenu(int *arr, int size)
         case 2:
             bubbleSort(arr, size);
             break;
+        case 3:
+            selectionSort(arr, size);
+            break;
         default:
             messageBox("Invalid Option!", ERROR);
             break;
@@ -273,6 +291,20 @@ void swap(int *a, int *b)
     int t = *a;
     *a = *b;
     *b = t;
+}
+
+void seed(int *arr, int *size)
+{
+    int limit;
+    printf("How many values to generate? ");
+    scanf("%d", &limit);
+    srand(time(NULL));
+    for (int i = 0; i < limit; i++)
+        arr[i] = rand();
+
+    *size = limit;
+
+    messageBox("Seeding done!", INFO);
 }
 
 void display(int const *arr, int size) // O(n)
@@ -414,6 +446,19 @@ void delete(int *arr, int *size) // O(n)
     messageBox("Value removed!", INFO);
 }
 
+void deleteAll(int *arr, int *size)
+{
+    if (*size == 0)
+    {
+        messageBox("Array empty!", ERROR);
+        return;
+    }
+
+    *size = 0;
+
+    messageBox("All values removed!", INFO);
+}
+
 void printSearchMessage(int index)
 {
     if (index == -1)
@@ -518,8 +563,8 @@ void bubbleSort(int *arr, int size)
     {
         for (int j = 0; j < size - i; j++)
         {
-            if(arr[j] > arr[j+1])
-                swap(&arr[j], &arr[j+1]);
+            if (arr[j] > arr[j + 1])
+                swap(&arr[j], &arr[j + 1]);
         }
     }
     messageBox("Array sorted!", INFO);
@@ -527,5 +572,25 @@ void bubbleSort(int *arr, int size)
 
 void selectionSort(int *arr, int size)
 {
-    
+    if (!size)
+    {
+        messageBox("Array empty!", ERROR);
+        return;
+    }
+
+    if (isSorted(arr, size))
+    {
+        messageBox("Array already sorted!", INFO);
+        return;
+    }
+
+    for (int i = 0; i < size - 1; i++)
+    {
+        for (int j = i + 1; j < size; j++)
+        {
+            if (arr[i] > arr[j])
+                swap(&arr[i], &arr[j]);
+        }
+    }
+    messageBox("Array sorted!", INFO);
 }
