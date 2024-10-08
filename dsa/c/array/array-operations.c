@@ -45,6 +45,7 @@ void binearySearch(int *arr, int size);
 int isSorted(int *arr, int size);
 void bubbleSort(int *arr, int size);
 void selectionSort(int *arr, int size);
+void insertionSort(int *arr, int size);
 
 int main(int argc, char const *argv[])
 {
@@ -60,8 +61,8 @@ int main(int argc, char const *argv[])
         printf("2. Insert\n");
         printf("3. Delete\n");
         printf("4. Search\n");
-        printf("5. Sort\n");
-        printf("6. Check sort status\n");
+        printf("5. Check sort status\n");
+        printf("6. Sort\n");
         printf("7. Seed Array\n");
         drawLine(linesize, NORMAL);
         printf("\nEnter choice [0 to exit]: ");
@@ -86,10 +87,10 @@ int main(int argc, char const *argv[])
             searchMenu(arr, size);
             break;
         case 5:
-            sortMenu(arr, size);
+            isSorted(arr, size);
             break;
         case 6:
-            isSorted(arr, size);
+            sortMenu(arr, size);
             break;
         case 7:
             seed(arr, &size);
@@ -249,6 +250,9 @@ void sortMenu(int *arr, int size)
         case 3:
             selectionSort(arr, size);
             break;
+        case 4:
+            insertionSort(arr, size);
+            break;
         default:
             messageBox("Invalid Option!", ERROR);
             break;
@@ -300,7 +304,7 @@ void seed(int *arr, int *size)
     scanf("%d", &limit);
     srand(time(NULL));
     for (int i = 0; i < limit; i++)
-        arr[i] = rand();
+        arr[i] = rand() % 1000;
 
     *size = limit;
 
@@ -591,6 +595,33 @@ void selectionSort(int *arr, int size)
             if (arr[i] > arr[j])
                 swap(&arr[i], &arr[j]);
         }
+    }
+    messageBox("Array sorted!", INFO);
+}
+
+void insertionSort(int *arr, int size)
+{
+    if (!size)
+    {
+        messageBox("Array empty!", ERROR);
+        return;
+    }
+
+    if (isSorted(arr, size))
+    {
+        messageBox("Array already sorted!", INFO);
+        return;
+    }
+    for (int i = 1; i < size; i++)
+    {
+        int key = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > key)
+        {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
     }
     messageBox("Array sorted!", INFO);
 }
