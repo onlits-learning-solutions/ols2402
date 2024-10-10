@@ -1,13 +1,32 @@
-class node // self-referential class
+#include <iostream>
+
+using namespace std;
+
+namespace adt
 {
-    int data;
-    node *next;
-};
+    class Node // self-referential class
+    {
+        int data;
+        Node *next;
+
+    public:
+        void setData(int data)
+        {
+            this->data = data;
+        }
+
+        int getData()
+        {
+            return data;
+        }
+    };
+}
 
 int main(int argc, char const *argv[])
 {
-    node head;
-    head.data = 10;
-    cout << head.data << endl;
+    adt::Node *head;
+    head = new adt::Node();
+    head->setData(10);
+    cout << head->getData() << endl;
     return 0;
 }
