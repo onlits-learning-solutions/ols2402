@@ -26,10 +26,10 @@ void drawLine(int n, int type);
 void messageBox(char *message, int type);
 
 void display(NODE *head);
-void insertMenu(NODE *head);
-void insertBeginning(NODE *node);
-void insertEnd(NODE *node);
-void insert(NODE *node);
+void insertMenu(NODE **head);
+void insertBeginning(NODE ***head);
+void insertEnd(NODE *head);
+void insert(NODE *head);
 
 int main(int argc, char const *argv[])
 {
@@ -56,6 +56,7 @@ int main(int argc, char const *argv[])
         switch (ch)
         {
         case 0:
+            printf("*head (main): %p\n", head);
             printf(BLUE BOLD "\nbye!\n\n" RESET);
             exit(0);
             break;
@@ -63,7 +64,7 @@ int main(int argc, char const *argv[])
             display(head);
             break;
         case 2:
-            insertMenu(head);
+            insertMenu(&head);
             break;
         case 3:
             // deleteMenu(arr, &size);
@@ -85,7 +86,6 @@ int main(int argc, char const *argv[])
             break;
         }
     }
-    return 0;
 }
 
 void drawLine(int n, int type) // O(n)
@@ -117,7 +117,7 @@ void messageBox(char *message, int type) // O(1)
 
 void display(NODE *head)
 {
-    if(!head)
+    if (!head)
     {
         messageBox("List empty!", ERROR);
         return;
@@ -134,7 +134,7 @@ void display(NODE *head)
     drawLine(strlen("Contents of list"), NORMAL);
 }
 
-void insertMenu(NODE *head)
+void insertMenu(NODE **head)
 {
     int ch, exit = 0;
     int linesize = strlen("3.  Insert at a specific index");
@@ -155,7 +155,7 @@ void insertMenu(NODE *head)
             exit = 1;
             break;
         case 1:
-            insertBeginning(head);
+            insertBeginning(&(*head));
             break;
         case 2:
             insertEnd(head);
@@ -171,19 +171,27 @@ void insertMenu(NODE *head)
         if (exit == 1)
             break;
     }
+    printf("*head (insert): %p\n", head);
 }
 
-void insertBeginning(NODE *node)
+void insertBeginning(NODE ***head)
 {
-
+    if (!(*head))
+    {
+        **head = (NODE *)malloc(sizeof(NODE));
+        printf("Enter a value: ");
+        scanf("%d", &(**head)->data);
+        (**head)->next = NULL;
+        messageBox("Node created!", INFO);
+        printf("*head (insertBeginning): %p\n", **head);
+        return;
+    }
 }
 
-void insertEnd(NODE *node)
+void insertEnd(NODE *head)
 {
-
 }
 
-void insert(NODE *node)
+void insert(NODE *head)
 {
-
 }
