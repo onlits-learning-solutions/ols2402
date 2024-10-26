@@ -27,9 +27,9 @@ void messageBox(char *message, int type);
 
 void display(NODE *head);
 void insertMenu(NODE **head);
-void insertBeginning(NODE ***head);
-void insertEnd(NODE *head);
-void insert(NODE *head);
+void insertBeginning(NODE **head);
+void insertEnd(NODE **head);
+void insert(NODE **head);
 
 int main(int argc, char const *argv[])
 {
@@ -56,7 +56,7 @@ int main(int argc, char const *argv[])
         switch (ch)
         {
         case 0:
-            printf("*head (main): %p\n", head);
+            printf("*head (main): %p\n", &head);
             printf(BLUE BOLD "\nbye!\n\n" RESET);
             exit(0);
             break;
@@ -155,7 +155,7 @@ void insertMenu(NODE **head)
             exit = 1;
             break;
         case 1:
-            insertBeginning(&(*head));
+            insertBeginning(&*head);
             break;
         case 2:
             insertEnd(head);
@@ -174,24 +174,24 @@ void insertMenu(NODE **head)
     printf("*head (insert): %p\n", head);
 }
 
-void insertBeginning(NODE ***head)
+void insertBeginning(NODE **head)
 {
     if (!(*head))
     {
-        **head = (NODE *)malloc(sizeof(NODE));
+        *head = malloc(sizeof(NODE));
         printf("Enter a value: ");
-        scanf("%d", &(**head)->data);
-        (**head)->next = NULL;
+        scanf("%d", &(*head)->data);
+        (*head)->next = NULL;
         messageBox("Node created!", INFO);
-        printf("*head (insertBeginning): %p\n", **head);
+        printf("*head (insertBeginning): %p\n", head);
         return;
     }
 }
 
-void insertEnd(NODE *head)
+void insertEnd(NODE **head)
 {
 }
 
-void insert(NODE *head)
+void insert(NODE **head)
 {
 }
