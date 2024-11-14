@@ -125,12 +125,19 @@ void display(NODE *head)
 
     NODE *itr = head;
 
-    printf("Contents of the list\n");
+    printf("\nContents of the list\n");
     drawLine(strlen("Contents of list"), NORMAL);
-    while (itr->next)
+    printf("\n");
+
+    while (1)
     {
         printf("%d\n", itr->data);
+        if (!(itr->next))
+            break;
+
+        itr = itr->next;
     }
+
     drawLine(strlen("Contents of list"), NORMAL);
 }
 
@@ -174,7 +181,7 @@ void insertMenu(NODE **head)
     printf("*head (insert): %p\n", head);
 }
 
-void insertBeginning(NODE **head)
+void insertBeginning(NODE **head) // O(1)
 {
     if (!(*head))
     {
@@ -183,15 +190,55 @@ void insertBeginning(NODE **head)
         scanf("%d", &(*head)->data);
         (*head)->next = NULL;
         messageBox("Node created!", INFO);
-        printf("*head (insertBeginning): %p\n", head);
         return;
     }
+
+    NODE *temp = *head;
+    *head = malloc(sizeof(NODE));
+    printf("Enter a value: ");
+    scanf("%d", &(*head)->data);
+    (*head)->next = temp;
+    messageBox("Node created!", INFO);
 }
 
 void insertEnd(NODE **head)
 {
+    if (!(*head))
+    {
+        *head = malloc(sizeof(NODE));
+        printf("Enter a value: ");
+        scanf("%d", &(*head)->data);
+        (*head)->next = NULL;
+        messageBox("Node created!", INFO);
+        return;
+    }
+
+    NODE *itr = *head;
+
+    while (1)
+    {
+        if (!(itr->next))
+            break;
+
+        itr = itr->next;
+    }
+
+    itr->next = malloc(sizeof(NODE));
+    printf("Enter a value: ");
+    scanf("%d", &itr->next->data);
+    itr->next->next = NULL;
+    messageBox("Node created!", INFO);
 }
 
 void insert(NODE **head)
 {
+    if (!(*head))
+    {
+        *head = malloc(sizeof(NODE));
+        printf("Enter a value: ");
+        scanf("%d", &(*head)->data);
+        (*head)->next = NULL;
+        messageBox("Node created!", INFO);
+        return;
+    }
 }
