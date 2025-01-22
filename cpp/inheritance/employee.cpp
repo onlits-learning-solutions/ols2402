@@ -4,7 +4,7 @@ using namespace std;
 
 namespace employee
 {
-    class Employee
+    class Employee // Base class
     {
     private:
         int empId;
@@ -24,38 +24,49 @@ namespace employee
     {
     }
 
-    class Manager
+    class Manager // Derived class
     {
     private:
-        int attendance;
+        int attendance;     //instance variable
+        float salary;
+
     public:
-        Manager(/* args */);
+        Manager() {}                           // Default Constructor
+        Manager(int attendance, float salary); // Parameterized Constructor
         ~Manager();
+        void display();
     };
 
-    Manager::Manager(/* args */)
+    Manager::Manager(int attendance, float salary)      //local variable
     {
-        int attendance;
-        float salary;
+        this->attendance = attendance;
+        this->salary = salary;
     }
 
     Manager::~Manager()
     {
     }
 
-    class Worker
+    void Manager::display()
+    {
+        cout << "Attendance: " << attendance << endl;
+        cout << "Salary: " << salary << endl;
+    }
+
+    class Worker // Derived class
     {
     private:
-        int hours;      // only round numbers allowed a worker can work for 1 hour or 2 hours but not 1.5 hours.
+        int hours; // only round numbers allowed a worker can work for 1 hour or 2 hours but not 1.5 hours.
         float wage;
+
     public:
-        Worker(/* args */);
+        // Worker(/* args */);
         ~Worker();
     };
 
-    Worker::Worker(/* args */)
-    {
-    }
+    // Worker::Worker(/* args */)
+    // {
+    // }
 
     Worker::~Worker()
     {
@@ -64,7 +75,10 @@ namespace employee
 
 int main(int argc, char const *argv[])
 {
-    employee::Manager m1, m2;
+    employee::Manager m1(21, 15000.00F), m2(23, 16000.00F);
+    employee::Manager m3;
     employee::Worker w1, w2;
+    m1.display();
+    m2.display();
     return 0;
 }
