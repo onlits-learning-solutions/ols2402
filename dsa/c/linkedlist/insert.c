@@ -1,6 +1,6 @@
 #include "linkedlist.h"
 
-void insertmenu(NODE *head)
+void insertmenu(NODE **head)
 {
     int ch;
     while (1)
@@ -19,7 +19,7 @@ void insertmenu(NODE *head)
             insertbeginning(head);
             break;
         case 2:
-            insertend(head);
+            // insertend(head);
             break;
         default:
             break;
@@ -27,25 +27,28 @@ void insertmenu(NODE *head)
     }
 }
 
-void insertbeginning(NODE *head) // O(1)
+void insertbeginning(NODE **head) // O(1)
 {
-    NODE *temp = head;
+    NODE *temp = *head;
 
-    head = (NODE *)malloc(sizeof(NODE));
+    *head = (NODE *)malloc(sizeof(NODE));
 
     printf("Enter a value: ");
-    scanf("%d", &head->data);
-    head->next = NULL;
+    scanf("%d", &(*head)->data);
+    (*head)->next = NULL;
 
     if (temp != NULL)
     {
-        head->next = temp;
+        (*head)->next = temp;
     }
 
     messagebox("Value inserted!");
+
+    printf("insert.head: %p\n", head);
+    printf("temp: %p\n", temp);
 }
 
-void insertend(NODE *head)
-{
-    messagebox("Underconstruction!");
-}
+// void insertend(NODE *head)
+// {
+//     messagebox("Underconstruction!");
+// }

@@ -20,6 +20,7 @@ void messagebox(char *message)
 
 void display(NODE *head)
 {
+    printf("display.head: %p\n", head);
     if(head == NULL)
     {
         messagebox("List Empty!");
