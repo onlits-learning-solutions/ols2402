@@ -3,8 +3,6 @@
 int main(void)
 {
     NODE *head = NULL;
-    printf("main.head: %p\n", head);
-    printf("&main.head: %p\n", &head);
     int ch;
     while (1)
     {
@@ -17,7 +15,6 @@ int main(void)
         {
         case 0:
             printf("Bye!\n");
-            printf("main.head: %p\n", head);
             return 0;
             break;
         case 1:

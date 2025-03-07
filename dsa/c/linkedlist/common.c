@@ -20,12 +20,13 @@ void messagebox(char *message)
 
 void display(NODE *head)
 {
-    printf("display.head: %p\n", head);
     if(head == NULL)
     {
         messagebox("List Empty!");
         return;
     }
+
+    messagebox("List Content");
 
     NODE *itr = head;
     while (itr != NULL)
@@ -33,4 +34,6 @@ void display(NODE *head)
         printf("%d\n", itr->data);
         itr = itr->next;
     }
+
+    messagebox("End of list");
 }

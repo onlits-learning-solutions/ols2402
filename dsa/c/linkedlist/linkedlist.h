@@ -17,4 +17,4 @@ void display(NODE *head);
 // ------ insert.c -------------
 void insertmenu(NODE **head);
 void insertbeginning(NODE **head);
-// void insertend(NODE **head);
+void insertend(NODE **head);

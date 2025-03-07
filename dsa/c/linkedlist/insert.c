@@ -19,7 +19,7 @@ void insertmenu(NODE **head)
             insertbeginning(head);
             break;
         case 2:
-            // insertend(head);
+            insertend(head);
             break;
         default:
             break;
@@ -33,7 +33,7 @@ void insertbeginning(NODE **head) // O(1)
 
     *head = (NODE *)malloc(sizeof(NODE));
 
-    printf("Enter a value: ");
+    printf("Enter value: ");
     scanf("%d", &(*head)->data);
     (*head)->next = NULL;
 
@@ -43,12 +43,36 @@ void insertbeginning(NODE **head) // O(1)
     }
 
     messagebox("Value inserted!");
-
-    printf("insert.head: %p\n", head);
-    printf("temp: %p\n", temp);
 }
 
-// void insertend(NODE *head)
-// {
-//     messagebox("Underconstruction!");
-// }
+void insertend(NODE **head)
+{
+    NODE **itr = head;
+    if (*itr == NULL)
+    {
+        *itr = (NODE *)malloc(sizeof(NODE));
+        printf("If block: *itr: %p\n", *itr);
+        printf("If block: *head: %p\n", *head);
+    }
+    else
+    {
+        printf("Else block!\n");
+        while ((*itr)->next != NULL)
+        {
+            *itr = (*itr)->next;
+            printf("*itr: %p\n", *itr);
+        }
+
+        (*itr)->next = (NODE *)malloc(sizeof(NODE));
+        *itr = (*itr)->next;
+        printf("Else block: *itr: %p\n", *itr);
+        printf("Else block: *head: %p\n", *head);
+    }
+
+    printf("Enter value: ");
+    scanf("%d", &(*itr)->data);
+    (*itr)->next = NULL;
+    printf("Final: *itr: %p\n", *itr);
+
+    messagebox("Value inserted!");
+}
