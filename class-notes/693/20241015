@@ -1,0 +1,18 @@
+
+	Access specifier/modifier
+		- public
+		- private
+		- protected
+		- default (Java)
+		
+		
+		dependency injection, 
+		Regular Expression,
+		threading, 
+		concurrency, 
+		Generics, 
+		file system and streams
+		
+		#define RED "\x..."
+		
+		const string RED = "\x";
