@@ -18,3 +18,4 @@ void display(NODE *head);
 void insertmenu(NODE **head);
 void insertbeginning(NODE **head);
 void insertend(NODE **head);
+void insertafter(NODE **head);

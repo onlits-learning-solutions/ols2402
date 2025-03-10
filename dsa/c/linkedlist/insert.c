@@ -47,32 +47,32 @@ void insertbeginning(NODE **head) // O(1)
 
 void insertend(NODE **head)
 {
-    NODE **itr = head;
-    if (*itr == NULL)
+    NODE *itr = NULL;
+    if (*head == NULL)
     {
-        *itr = (NODE *)malloc(sizeof(NODE));
-        printf("If block: *itr: %p\n", *itr);
-        printf("If block: *head: %p\n", *head);
+        *head = (NODE *)malloc(sizeof(NODE));
+        itr = *head;
     }
     else
     {
-        printf("Else block!\n");
-        while ((*itr)->next != NULL)
+        itr = *head;
+        while (itr->next != NULL)
         {
-            *itr = (*itr)->next;
-            printf("*itr: %p\n", *itr);
+            itr = itr->next;
         }
 
-        (*itr)->next = (NODE *)malloc(sizeof(NODE));
-        *itr = (*itr)->next;
-        printf("Else block: *itr: %p\n", *itr);
-        printf("Else block: *head: %p\n", *head);
+        itr->next = (NODE *)malloc(sizeof(NODE));
+        itr = itr->next;
     }
 
     printf("Enter value: ");
-    scanf("%d", &(*itr)->data);
-    (*itr)->next = NULL;
-    printf("Final: *itr: %p\n", *itr);
+    scanf("%d", &itr->data);
+    itr->next = NULL;
 
     messagebox("Value inserted!");
+}
+
+void insertafter(NODE **head)
+{
+    // Write your code here
 }
