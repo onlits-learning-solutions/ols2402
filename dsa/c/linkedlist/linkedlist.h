@@ -19,3 +19,9 @@ void insertmenu(NODE **head);
 void insertbeginning(NODE **head);
 void insertend(NODE **head);
 void insertafter(NODE **head);
+
+// -------- delete.c -----------
+void insertmenu(NODE **head);
+void deleteall(NODE **head);
+void deletebeginning(NODE **head);
+void deleteend(NODE **head);

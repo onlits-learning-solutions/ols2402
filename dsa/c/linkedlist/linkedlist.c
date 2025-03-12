@@ -23,6 +23,9 @@ int main(void)
         case 2:
             insertmenu(&head);
             break;
+        case 3:
+            deletemenu(&head);
+            break;
         default:
             break;
         }
