@@ -1,6 +1,6 @@
 #include "linkedlist.h"
 
-void insertmenu(NODE **head)
+void deletemenu(NODE **head)
 {
     int ch;
     while (1)
@@ -33,15 +33,22 @@ void insertmenu(NODE **head)
 
 void deleteall(NODE **head)
 {
-
 }
 
-void deletebeginning(NODE **head)
+void deletebeginning(NODE **head) // O(1)
 {
+    if (*head == NULL)
+    {
+        messagebox("List Empty!");
+        return;
+    }
 
+    NODE *temp = *head;
+    *head = (*head)->next;
+    free(temp);
+    messagebox("Node deleted!");
 }
 
 void deleteend(NODE **head)
 {
-    
 }
