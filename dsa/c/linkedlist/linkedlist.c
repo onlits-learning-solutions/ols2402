@@ -9,12 +9,13 @@ int main(void)
         messagebox("MAIN MENU");
         printf("1. Display\n");
         printf("2. Insert\n");
+        printf("3. Delete\n");
         printf("Enter choice [0 to exit]: ");
         scanf("%d", &ch);
         switch (ch)
         {
         case 0:
-            printf("Bye!\n");
+            messagebox("Bye!");
             return 0;
             break;
         case 1:
