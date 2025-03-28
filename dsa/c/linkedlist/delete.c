@@ -49,6 +49,29 @@ void deletebeginning(NODE **head) // O(1)
     messagebox("Node deleted!");
 }
 
-void deleteend(NODE **head)
+void deleteend(NODE **head) // O(n)
 {
+    if (*head == NULL) // Empty list
+    {
+        messagebox("List Empty!");
+        return;
+    }
+    else if ((*head)->next == NULL) // Single Node
+    {
+        free(*head);
+        *head = NULL;
+    }
+    else
+    {
+        NODE *itr = *head;
+        NODE *temp = NULL;
+        while (itr->next != NULL)
+        {
+            temp = itr;
+            itr = itr->next;
+        }
+        free(itr);
+        temp->next = NULL;
+    }
+    messagebox("Node deleted!");
 }
