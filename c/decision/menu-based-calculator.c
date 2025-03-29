@@ -34,6 +34,22 @@ int main(void)
             c = a - b;
             printf("The difference is %d.\n", c);
             break;
+        case 3:
+            printf("\nEnter the first number: ");
+            scanf("%d",&a);
+            printf("\nEnter the second number: ");
+            scanf("%d",&b);
+            c = a * b;
+            printf("The product is %d.\n", c);
+            break;
+        case 4:
+            printf("\nEnter the first number: ");
+            scanf("%d",&a);
+            printf("\nEnter the second number: ");
+            scanf("%d",&d);
+            c = a / b;
+            printf("The division is %d.\n" c);
+            break;        
         default:
             printf("\nInvalid option! Retry!\n\n");
             break;
