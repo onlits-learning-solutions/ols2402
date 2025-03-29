@@ -23,13 +23,13 @@ if(isset($_SESSION['email']))
         <a class="active">Member</a>
         <a href="transaction.php">Transaction</a>
         <a href="report.php">Report</a>
-        <span id="display-email"><?= $email ?></span>
+        <span id="display-email"><?= $email ?><a href="logout.php">logout</a></span>
     </nav>
     <main>
         <aside>
             <a href="member.php">Member Home</a>
             <a href="add-member.php">Add Member</a>
-            <a href="">Edit Member</a>
+           
         </aside>
         <div class="content">
             <h3>Add Member</h3>
